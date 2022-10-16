@@ -6,6 +6,20 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+:root {
+  /* Use as the main backdrop for the page and primary containers */
+  --primary-color: #000814; 
+  /* Use as the secondary backdrop for secondary containers */
+  --secondary-color: #001D3D;
+  /* Use as backdrop for main components (not containers) (buttons, forms, dropdowns, etc.) */
+  --tertiary-color: #003566;
+  /* Use for decorations (borders, highlights, etc.) */
+  --quarternary-color: #FFC300;
+  /*Use for fonts*/
+  --pentiary-color: #FFFFFF;
+}
+
+
 a {
   color: inherit;
   text-decoration: none;
