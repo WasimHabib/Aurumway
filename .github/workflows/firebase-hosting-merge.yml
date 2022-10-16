@@ -11,11 +11,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: 'Firebase Merge/Deploy'
-        working-directory: './aurumway'
+      - name: Firebase Merge
+        working-directory: ./aurumway
         run:  npm ci && npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
-        with:
+      - name: Firebase Deploy
+        working-directory: ./aurumway
+      -  with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_AURUMWAY_C85F5 }}'
           channelId: live
