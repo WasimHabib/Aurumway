@@ -22,3 +22,6 @@ jobs:
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_AURUMWAY_C85F5 }}'
           channelId: live
           projectId: aurumway-c85f5
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+          PROJECT_PATH: ./aurumway
