@@ -17,8 +17,10 @@ body {
   --quarternary-color: #FFC300;
   /*Use for fonts*/
   --pentiary-color: #FFFFFF;
-}
 
+  /*Common fonts*/
+  --ui-font: Helvetica, "Times New Roman", serif
+}
 
 a {
   color: inherit;
@@ -28,6 +30,7 @@ a {
 * {
   box-sizing: border-box;
 }
+
 
 @media (prefers-color-scheme: dark) {
   html {
