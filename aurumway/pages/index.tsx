@@ -1,8 +1,6 @@
-import { useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap"
 import { Button } from "../lib/atoms/Button";
-import gsapCore from "gsap/gsap-core";
-import { Power2 } from "gsap/dist/gsap";
+import InfoBox from "../lib/components/InfoBox";
 
 
 function Home() {
@@ -46,6 +44,7 @@ function Home() {
     <>
       <div >
           <Button type="SUCCESS" id="MyButton" text="Click Me" onClick={clickFunc} width="100px" height="50px" className="Button" />
+          <InfoBox  width="500px" height="500px" hiddenHeight="150px" hiddenWidth="300px"/>
       </div>
     </>
   );
