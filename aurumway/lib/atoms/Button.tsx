@@ -1,5 +1,6 @@
-import React, { useRef } from 'react';
+import { gsap } from 'gsap/dist/gsap';
 import styles from '../../styles/Button.module.css'; 
+
 
 
 
@@ -8,6 +9,43 @@ export const Button = (props: {type: "SUCCESS" | "FAILURE" | "INFO", text: strin
     let width = props.width;
     let height = props.height;
     let buttonClass = styles.INFO;
+
+
+    var runAnim = function({currentTarget}:any) {
+        let tl = gsap.timeline({});
+        tl.fromTo(currentTarget, {
+            color: "#FFFFFF",
+            scaleX: 1,
+            scaleY: 1,
+            duration: 0.15,
+            ease: "power2.in"
+        }, {
+            backgroundColor: "#FFC300",
+            color: "#000814",
+            scaleX: 0.8,
+            scaleY: 0.8,
+            duration: 0.15,
+            borderColor: "#000814",
+            ease: "power2.out"
+        }, ">")
+        tl.fromTo(currentTarget, {
+            color: "#000814",
+            duration: 0.15,
+            scaleX: 0.8,
+            scaleY: 0.8,
+            ease: "powe2.in"
+        }, {
+            backgroundColor: "#000814",
+            color: "#FFFFFF",
+            duration: 0.15,
+            scaleX: 1,
+            scaleY: 1,
+            borderColor: "#FFC300",
+            ease: "power2.out"
+        }, ">")
+        
+       tl.play();
+    }
 
     switch(props.type){
         case "SUCCESS":
@@ -30,7 +68,7 @@ export const Button = (props: {type: "SUCCESS" | "FAILURE" | "INFO", text: strin
 
 
   return (
-    <button  id = {props.id} className = {buttonClass + " " + props.className} style = {{width: width, height: height}} onClick={props.onClick}>
+    <button  id = {props.id} className = {buttonClass + " " + props.className} style = {{width: width, height: height}} onClick={(event) => {runAnim(event); props.onClick(event)}}>
         {props.text}
     </button>
 );

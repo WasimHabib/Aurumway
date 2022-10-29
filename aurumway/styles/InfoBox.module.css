@@ -1,7 +1,6 @@
 .container {
     max-width: 500px;
-    direction: rtl;
-    float: right;
+    margin: auto;
 }
 
 .container > * {
@@ -10,24 +9,81 @@
 
 .header {
     background-color: grey;
-    height: 15%;
-    
     
 }
 
 .body {
     background-color: blue;
-    width: 100%;
-    height: 70%
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    
 }
 .footer {
     background-color: green;
-    width: 100%;
-    height: 15%
+  
 }
 .headerIcon {
     cursor: pointer;
     height: 100%;
-    
-    
+}
+.title {
+    font: var(--ui-font);
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--pentiary-color);
+}
+.titleContainer {
+    display: flex;
+    justify-content: center;
+    width: auto;
+}
+.titleLeft {
+    font: var(--ui-font);
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--pentiary-color);
+    margin-left: 10%;
+}
+.titleRight {
+    font: var(--ui-font);
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--pentiary-color);
+    margin-right: 10%;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    background-color: var(--tertiary-color);
+}
+
+.textContainer {
+    position: relative;
+    margin: auto;
+    width: 90%;
+    min-height: 80%;
+    max-height: 90%;
+    overflow: scroll;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    border: 3px solid var(--quarternary-color);
+}
+.text {
+    font: var(--ui-font);
+    font-weight: bold;
+    position: relative;
+    color: var(--pentiary-color);
+    padding: 1.2rem 1rem;
+    z-index: 1;
 }

@@ -4,47 +4,19 @@ import InfoBox from "../lib/components/InfoBox";
 
 
 function Home() {
+  let text = " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
   var clickFunc = ({currentTarget}:any): void => {
-     let tl = gsap.timeline({});
-      tl.fromTo(currentTarget, {
-          color: "#FFFFFF",
-          scaleX: 1,
-          scaleY: 1,
-          duration: 0.15,
-          ease: "power2.in"
-      }, {
-          backgroundColor: "#FFC300",
-          color: "#000814",
-          scaleX: 0.8,
-          scaleY: 0.8,
-          duration: 0.15,
-          borderColor: "#000814",
-          ease: "power2.out"
-      }, ">")
-      tl.fromTo(currentTarget, {
-          color: "#000814",
-          duration: 0.15,
-          scaleX: 0.8,
-          scaleY: 0.8,
-          ease: "powe2.in"
-      }, {
-          backgroundColor: "#000814",
-          color: "#FFFFFF",
-          duration: 0.15,
-          scaleX: 1,
-          scaleY: 1,
-          borderColor: "#FFC300",
-          ease: "power2.out"
-      }, ">")
-      
-     tl.play();
+    console.log("clicked button");
   }
 
   return (
     <>
       <div >
           <Button type="SUCCESS" id="MyButton" text="Click Me" onClick={clickFunc} width="100px" height="50px" className="Button" />
-          <InfoBox  width="500px" height="500px" hiddenHeight="150px" hiddenWidth="300px"/>
+          <div style={{margin: 'auto', maxWidth: '500px'}}>
+            <InfoBox  width="500px" height="500px" hiddenHeight="150px" hiddenWidth="300px" hasFooter={true} direction="RIGHT" bodytext={text}/>
+          </div>
+       
       </div>
     </>
   );
