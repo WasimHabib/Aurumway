@@ -22,17 +22,31 @@ body {
   --ui-font: Helvetica, "Times New Roman", serif
 }
 
+
+.scroll-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-stop: normal;
+}
+
+
+.container {
+  scroll-snap-type: y mandatory;
+  overflow: auto;
+}
+
 a {
   color: inherit;
   text-decoration: none;
 }
 
-* {
+/* * {
   box-sizing: border-box;
-}
+} */
 
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
@@ -40,4 +54,4 @@ a {
     color: white;
     background: black;
   }
-}
+} */
