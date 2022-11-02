@@ -42,6 +42,7 @@
     font: var(--ui-font);
     margin-bottom: 1.2rem;
     resize: none;
+    border: 1px solid var(--quarternary-color)
     
 }
 .descriptor {
@@ -54,6 +55,7 @@
 .inputField {
     font-size: 1.5rem;
     height: 4rem;
+    border: 1px solid var(--quarternary-color)
     
 }
 
