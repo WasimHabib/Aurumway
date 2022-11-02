@@ -1,0 +1,75 @@
+.rowContent{
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.formContainer {
+    background: linear-gradient(to top right, var(--primary-color ) 50%, grey 120%);
+    max-width: 60rem;
+    height: 100%;
+    padding: 1rem 10rem;
+    box-shadow: .125rem .125rem 1.75rem 1rem var(--quarternary-color);
+}
+
+
+.header {
+    font-size: 3rem;
+    color: var(--pentiary-color)
+}
+
+.titleContainer {
+    display: flex;
+    justify-content: center;
+    font: var(--ui-font);
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0.5rem 0;
+}
+
+.divider {
+    position: relative;
+    width: 50%;
+}
+
+.messageBox {
+    font: var(--ui-font);
+    margin-bottom: 1.2rem;
+    resize: none;
+    
+}
+.descriptor {
+    font: var(--ui-font);
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: var(--pentiary-color)
+}
+
+.inputField {
+    font-size: 1.5rem;
+    height: 4rem;
+    
+}
+
+.header {
+    font: var(--ui-font);
+    font-weight: bold;
+    font-size: 3rem;
+}
+.submitContainer {
+    display: flex;
+    justify-content: flex-start;
+    width: 40%;
+    
+}
+
+.submitButton {
+    margin-right: 0.3rem;
+    padding: 0.5rem;
+}

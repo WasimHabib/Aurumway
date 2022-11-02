@@ -2,6 +2,8 @@ import { gsap } from "gsap"
 import { useLayoutEffect } from "react";
 import { Button } from "../lib/atoms/Button";
 import InfoBox from "../lib/components/InfoBox";
+import { Form } from '../lib/components/ContactForm';
+import { onSubmit } from "../lib/services/commonFuncs";
 import { colors } from "../lib/models/contants";
 
 
@@ -15,13 +17,17 @@ function Home() {
       
   }, []);
 
+
+
   return (
     <>
-    <div style={BackDropStyles} className='container' >
+    {/* <div style={BackDropStyles} className='container' >
         <div style={EntranceStyles} className='scroll-area'>1</div>
         <div style={MainStyles} className='scroll-area'>2</div>
         <div style={ContactStyles} className='scroll-area'>3</div>
-    </div>
+    </div> */}
+    <Button type="INFO" id="" className='' text="Hello" onClick = {() => {console.log("Hello World!")}} height="50px" width="100px"/>
+    <Form  onSubmit={ onSubmit }/> 
 
       {/* <div >
           <Button type="SUCCESS" id="MyButton" text="Click Me" onClick={clickFunc} width="100px" height="50px" className="Button" />
