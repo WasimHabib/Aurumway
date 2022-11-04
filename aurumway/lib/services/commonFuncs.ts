@@ -3,7 +3,7 @@ export function onSubmit(event:any) {
 
 }
 
-export function sendEmail(firstName: string, lastName: string, email: string, message: string): boolean {
+export function sendEmail(firstName: string, lastName: string, email: string, message: string): Promise<any> {
     let result = true;
     let bod = {
         firstName: firstName,
@@ -11,21 +11,21 @@ export function sendEmail(firstName: string, lastName: string, email: string, me
         email: email,
         message: message
     }
-    const response = fetch('', {
+    return fetch('https://us-central1-aurumway-c85f5.cloudfunctions.net/AurumwayAPI/sendEmail', {
         method: 'POST',
         cache: 'no-cache',
         body: JSON.stringify(bod),
         headers: {
             'Content-Type': 'application/json'
-            //'Content-Type': 'application/x-www-form-urlencoded',
           },
 
-    }).then((res) => {
-        result = true;
     })
-    .catch((error) => {
-        result = false;
-    });
+    // .then((res) => {
+    //     result = true;
+    // })
+    // .catch((error) => {
+    //     result = false;
+    // });
        
-    return result;
+    // return result;
 }

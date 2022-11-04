@@ -2,23 +2,51 @@ import React, { useRef } from 'react'
 import styles from '../../styles/ContactForm.module.css';
 import { Button } from '../atoms/Button';
 import { sendEmail } from '../services/commonFuncs';
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const Form = (props: {onSubmit: (event:any) => void}) => {
   let emailRef = useRef(null);
   let firstNameRef = useRef(null);
   let lastNameRef = useRef(null);
   let messageRef = useRef(null);
+  let loadingRef = useRef(null);
 
   
   function validateAndSend() {
-     sendEmail(firstNameRef.current.value, lastNameRef.current.value, emailRef.current.value, messageRef.current.value);
+    loadingRef.current.style.display = 'flex';
+    sendEmail(firstNameRef.current.value, lastNameRef.current.value, emailRef.current.value, messageRef.current.value)
+    .then((res) => {
+      loadingRef.current.style.display = 'none';
+      const successToast = toast.success("Email Sent! Thank you for your business!", {
+          autoClose: 2000,
+          isLoading: true,
+          position: toast.POSITION.TOP_CENTER,
+          theme: 'colored'
+
+      });
+    })
+    .catch((err) => {
+      loadingRef.current.style.display = 'none';
+      const failureToast = toast.error("Unable to Send Email. Try again in a little bit.", {
+          autoClose: 2000,
+          position: toast.POSITION.TOP_CENTER,
+          theme: 'colored'
+
+      });
+    });
   }
 
 
   return (
     <>
-      <div className= {'container ' + styles.formContainer }>
+      <ToastContainer />
+      <div ref={loadingRef} className={styles.overlay}>
+          <div className={styles.symbolContainer}>
+              <img src="loading-76.webp" alt="loading.gif..." className={styles.spinner}/>
+          </div>
+      </div>
+      <div  className= {'container ' + styles.formContainer }>
         <div className='row'>
             <div className={styles.titleContainer}>
                 <h1 className={styles.header}>Let's Stay in Touch!</h1>
