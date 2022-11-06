@@ -5,19 +5,19 @@ import { sendEmail } from '../services/commonFuncs';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-export const Form = (props: {onSubmit: (event:any) => void}) => {
-  let emailRef = useRef(null);
-  let firstNameRef = useRef(null);
-  let lastNameRef = useRef(null);
-  let messageRef = useRef(null);
-  let loadingRef = useRef(null);
+export const Form = (props: {onSubmit: (event:any) => void, onCancel: (event:any) => void}) => {
+  let emailRef = useRef<HTMLInputElement>(null);
+  let firstNameRef = useRef<HTMLInputElement>(null);
+  let lastNameRef = useRef<HTMLInputElement>(null);
+  let messageRef = useRef<HTMLTextAreaElement>(null);
+  let loadingRef = useRef<HTMLInputElement>(null);
 
   
   function validateAndSend() {
-    loadingRef.current.style.display = 'flex';
-    sendEmail(firstNameRef.current.value, lastNameRef.current.value, emailRef.current.value, messageRef.current.value)
+    loadingRef.current!.style.display = 'flex';
+    sendEmail(firstNameRef.current!.value, lastNameRef.current!.value, emailRef.current!.value, messageRef.current!.value)
     .then((res) => {
-      loadingRef.current.style.display = 'none';
+      loadingRef.current!.style.display = 'none';
       const successToast = toast.success("Email Sent! Thank you for your business!", {
           autoClose: 2000,
           isLoading: true,
@@ -27,7 +27,7 @@ export const Form = (props: {onSubmit: (event:any) => void}) => {
       });
     })
     .catch((err) => {
-      loadingRef.current.style.display = 'none';
+      loadingRef.current!.style.display = 'none';
       const failureToast = toast.error("Unable to Send Email. Try again in a little bit.", {
           autoClose: 2000,
           position: toast.POSITION.TOP_CENTER,

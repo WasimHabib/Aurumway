@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useLayoutEffect, useRef, useState } from 'react'
 import styles from '../../styles/InfoBox.module.css';
 import { gsap } from "gsap"
 import { colors } from '../models/contants';
@@ -6,7 +6,16 @@ import { colors } from '../models/contants';
 
 
 
-export default function InfoBox(props: {width: string, height: string, hiddenWidth: string, hiddenHeight: string, hasFooter: boolean, direction: "LEFT" | "RIGHT", bodytext: string}) {
+export default function InfoBox(props: {
+    width: string, 
+    height: string, 
+    hiddenWidth: string, 
+    hiddenHeight: string, 
+    hasFooter: boolean, 
+    direction: "LEFT" | "RIGHT", 
+    bodytext: string,
+    initialOpen: boolean
+    }) {
     let [isExpanded, setIsExpanded] = useState(false);
     let containerRef = useRef(null);
     let headerRef = useRef(null);
@@ -22,7 +31,7 @@ export default function InfoBox(props: {width: string, height: string, hiddenWid
     let title = props.direction == "LEFT" ? styles.titleLeft : styles.titleRight;
     
     let inlineStyle: React.CSSProperties = {
-        width: props.hiddenWidth,
+        width:  props.hiddenWidth,
         height: props.hiddenHeight,
         direction: props.direction == "LEFT" ? 'ltr' : 'rtl',
         float: props.direction == "LEFT" ? 'left' : 'right'
@@ -42,6 +51,14 @@ export default function InfoBox(props: {width: string, height: string, hiddenWid
         backgroundColor: colors.colorTertiary,
         overflow: 'hidden'
     }
+
+
+    useLayoutEffect(()=>{
+        if(props.initialOpen) {
+            toggleInfoBox();
+        }
+    }, []); 
+
 
     function toggleInfoBox(): any {
         let tl = gsap.timeline();

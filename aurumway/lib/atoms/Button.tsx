@@ -73,7 +73,7 @@ export const Button = (props: {type: "SUCCESS" | "FAILURE" | "INFO", text: strin
 
 
   return (
-    <button type="button" id = {props.id} className ={buttonClass + ' ' + props.className} style = {{width: width, height: height}} onClick={(event) => {runAnim(event); props.onClick(event)}}>
+    <button type="button" id = {props.id} className ={buttonClass + ' ' + props.className} onClick={(event) => {runAnim(event); props.onClick(event)}}>
         {props.text}
     </button>
 );
