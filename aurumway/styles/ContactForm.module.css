@@ -14,8 +14,6 @@
   height: 100%;
   padding: 1rem 0rem;
   box-shadow: 0.125rem 0.125rem 1.75rem 1rem var(--quarternary-color);
-  overflow: hidden;
-  overflow-y: scroll;
 }
 
 .rowCont {
