@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useRef, useState } from "react";
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import styles from "../../styles/InfoBox.module.css";
 import { gsap } from "gsap";
 import { colors } from "../models/contants";
@@ -18,11 +18,12 @@ export default function InfoBox(props: {
   let containerRef = useRef(null);
   let headerRef = useRef(null);
   let footerRef = useRef(null);
-  let iconRef = useRef(null);
+  let iconRef = useRef<HTMLImageElement>(null);
   let titleRef = useRef(null);
   let overlayRef = useRef(null);
   let bodyTextRef = useRef(null);
   let bodyRef = useRef(null);
+  let imageSRC = "/cog_golden.png";
   let bodyAnimDuration = 0.7;
   let iconAnimDuration = 0.7;
   let delayedTextAnimDur = 0.4;
@@ -60,10 +61,9 @@ export default function InfoBox(props: {
 
   function toggleInfoBox(): any {
     let tl = gsap.timeline();
-
     if (isExpanded == true) {
       setIsExpanded(false);
-
+      iconRef.current!.src = "/cog_golden.png";
       //expand body
       tl.fromTo(
         containerRef.current,
@@ -137,13 +137,11 @@ export default function InfoBox(props: {
         {
           rotate: 0,
           duration: iconAnimDuration,
-          src: "/cog.png",
           ease: "linear",
         },
         {
           rotate: rotationDir,
           duration: iconAnimDuration,
-          src: "/cog_golden.png",
           ease: "linear",
         },
         0
@@ -191,6 +189,7 @@ export default function InfoBox(props: {
       );
     } else {
       setIsExpanded(true);
+      iconRef.current!.src = "/cog.png";
       tl.fromTo(
         containerRef.current,
         {
@@ -261,13 +260,11 @@ export default function InfoBox(props: {
         {
           rotate: 0,
           duration: iconAnimDuration,
-          src: "/cog_golden.png",
           ease: "linear",
         },
         {
           rotate: -rotationDir,
           duration: iconAnimDuration,
-          src: "/cog.png",
           ease: "linear",
         },
         0
@@ -333,7 +330,7 @@ export default function InfoBox(props: {
             className={styles.headerIcon}
             style={iconStyle}
             ref={iconRef}
-            src="/cog_golden.png"
+            src={imageSRC}
           />
           <div className={styles.titleContainer}>
             <span ref={titleRef} className={title}>
@@ -376,7 +373,7 @@ export default function InfoBox(props: {
             className={styles.headerIcon}
             style={iconStyle}
             ref={iconRef}
-            src="/cog_golden.png"
+            src={imageSRC}
           />
           <div className={styles.titleContainer}>
             <span ref={titleRef} className={title}>
