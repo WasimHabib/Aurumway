@@ -1,112 +1,124 @@
-.rowContent{
-    display: flex;
-    justify-content: space-around;
-    margin: auto;
+.rowContent {
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
 }
 
-.formContainer {
-    background: linear-gradient(to top right, var(--primary-color ) 50%, grey 120%);
-    max-width: 60rem;
-    height: 100%;
-    padding: 1rem 10rem;
-    box-shadow: .125rem .125rem 1.75rem 1rem var(--quarternary-color);
+.formaContainer {
+  background: linear-gradient(
+    to top right,
+    var(--primary-color) 50%,
+    grey 120%
+  );
+  max-width: 60rem;
+  height: 100%;
+  padding: 1rem 0rem;
+  box-shadow: 0.125rem 0.125rem 1.75rem 1rem var(--quarternary-color);
+  overflow: hidden;
+  overflow-y: scroll;
 }
 
+.rowCont {
+  padding: 0rem 5rem;
+}
 
 .header {
-    font-size: 3rem;
-    color: var(--pentiary-color)
+  font-size: 3rem;
+  color: var(--pentiary-color);
+}
+
+.buttonRow {
+  height: 12vh;
 }
 
 .titleContainer {
-    display: flex;
-    justify-content: center;
-    font: var(--ui-font);
-    align-items: flex-start;
-    margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  font: var(--ui-font);
+  align-items: flex-start;
+  margin-bottom: 1rem;
 }
 
 .inputGroup {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0.5rem 0;
 }
 
 .divider {
-    position: relative;
-    width: 50%;
+  margin-right: 1rem;
 }
 
 .messageBox {
-    font: var(--ui-font);
-    margin-bottom: 1.2rem;
-    resize: none;
-    border: 1px solid var(--quarternary-color)
-    
+  font: var(--ui-font);
+  resize: none;
+  min-height: 12vh;
+  border: 1px solid var(--quarternary-color);
 }
 .descriptor {
-    font: var(--ui-font);
-    font-weight: bold;
-    font-size: 2.5rem;
-    color: var(--pentiary-color)
+  font: var(--ui-font);
+  font-weight: bold;
+  font-size: 2.5vw;
+  color: var(--pentiary-color);
 }
 
 .inputField {
-    font-size: 1.5rem;
-    height: 4rem;
-    border: 1px solid var(--quarternary-color)
-    
+  font-size: 1.5rem;
+  height: 4rem;
+  width: 100%;
+  border: 1px solid var(--quarternary-color);
 }
 
 .header {
-    font: var(--ui-font);
-    font-weight: bold;
-    font-size: 3rem;
+  font: var(--ui-font);
+  font-weight: bold;
+  font-size: 3rem;
 }
 .submitContainer {
-    display: flex;
-    justify-content: flex-start;
-    width: 40%;
-    
+  display: flex;
+  justify-content: flex-start;
+  width: 40%;
 }
 
 .submitButton {
-    margin-right: 0.3rem;
-    padding: 0.5rem;
+  margin-right: 0.3rem;
+  padding: 0.5rem;
+  height: 50%;
+  width: 5rem;
 }
 
 .overlay {
-    position: fixed; /* Sit on top of the page content */
-    display: none; /* Hidden by default */
-    width: 100%; /* Full width (cover the whole page) */
-    height: 100%; /* Full height (cover the whole page) */
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
-    z-index: 7; /* Specify a stack order in case you're using a different order for other elements */
-    cursor: pointer; /* Add a pointer on hover */
-    justify-content: center;
-    align-items: center;
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+  z-index: 7; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+  justify-content: center;
+  align-items: center;
 }
 
 .symbolContainer {
-    background-color: black;
-    border: 5px solid var(--quarternary-color);
-    border-radius: 20px;
-    height: 300px;
-    width: 300px;
-    margin: auto;
-    position:relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-color: black;
+  border: 5px solid var(--quarternary-color);
+  border-radius: 20px;
+  height: 300px;
+  width: 300px;
+  margin: auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .spinner {
-    position: relative;
-    height: 200px;
-    margin: auto;
+  position: relative;
+  height: 200px;
+  margin: auto;
 }
