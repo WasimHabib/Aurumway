@@ -20,12 +20,4 @@ export function sendEmail(firstName: string, lastName: string, email: string, me
           },
 
     })
-    // .then((res) => {
-    //     result = true;
-    // })
-    // .catch((error) => {
-    //     result = false;
-    // });
-       
-    // return result;
 }

@@ -29,7 +29,6 @@ export const Form = (props: {
           "Email Sent! Thank you for your business!",
           {
             autoClose: 2000,
-            isLoading: true,
             position: toast.POSITION.TOP_CENTER,
             theme: "colored",
           }

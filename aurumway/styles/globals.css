@@ -426,8 +426,8 @@ body {
     border-radius: 100%;
     margin: auto;
     margin-bottom: 0.5rem;
-    width: 32rem;
-    height: 32rem;
+    width: 26rem;
+    height: 26rem;
     background-image: url("../public/pittsburgh_skyline_1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -515,9 +515,8 @@ body {
   }
 
   .detailsContainer {
-    height: 35vh;
+    height: 30%;
     max-width: 90%;
-    max-height: 250px;
     display: flex;
     justify-content: flex-start;
     padding-left: 10px;
@@ -575,7 +574,55 @@ body {
     margin-left: 28%;
     margin-top: -50%;
   }
+  .contactForm {
+  }
+  .formContainer {
+    width: 50%;
+    margin: auto;
+  }
+  .imgContainer {
+  }
+  .profileDiv {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    flex-direction: column;
+  }
+  .middleDiv {
+    width: 50%;
+    height: 100%;
+    padding-right: 3rem;
+    position: relative;
+  }
 
+  .ceoDescription {
+    margin: auto;
+    margin-top: 0.5rem;
+    height: 5rem;
+    color: var(--pentiary-color);
+    font-weight: bold;
+    padding: 1rem;
+    width: 80%;
+  }
+
+  .profile {
+    border-radius: 100%;
+    margin: auto;
+    margin-bottom: 0.5rem;
+    width: 26rem;
+    height: 26rem;
+    background-image: url("../public/pittsburgh_skyline_1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .infoContainer {
+    height: 50%;
+    width: 100%;
+  }
+
+  .infoBox {
+    margin-top: 15%;
+  }
   .pittsburghimg {
     background-image: url("../public/pittsburgh_skyline_1.jpg");
     background-size: cover;
@@ -703,7 +750,56 @@ body {
     margin-left: 28%;
     margin-top: -50%;
   }
+  .contactForm {
+  }
+  .formContainer {
+    width: 50%;
+    margin: auto;
+  }
+  .imgContainer {
+  }
+  .profileDiv {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    flex-direction: column;
+  }
+  .middleDiv {
+    width: 50%;
+    height: 100%;
+    padding-right: 3rem;
+    position: relative;
+  }
 
+  .ceoDescription {
+    margin: auto;
+    margin-top: 0.5rem;
+    height: 5rem;
+    color: var(--pentiary-color);
+    font-weight: bold;
+    padding: 1rem;
+    width: 50%;
+  }
+
+  .profile {
+    border-radius: 100%;
+    margin: auto;
+    margin-bottom: 0.5rem;
+    width: 35rem;
+    height: 35rem;
+    background-image: url("../public/pittsburgh_skyline_1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .infoContainer {
+    height: 50%;
+    width: 100%;
+    padding-right: 20%;
+  }
+
+  .infoBox {
+    margin-top: 13%;
+  }
   .pittsburghimg {
     background-image: url("../public/pittsburgh_skyline_1.jpg");
     background-size: cover;
@@ -716,8 +812,8 @@ body {
   .imgContainer {
     position: relative;
     float: right;
-    margin-top: -15%;
-    margin-right: -10%;
+    margin-top: -10%;
+    margin-right: -5%;
     width: 60vw;
     height: 60vw;
     max-width: 900px;
@@ -746,18 +842,17 @@ body {
 
   .indexHeader {
     font: var(--ui-font);
-    font-size: 5vw;
+    font-size: 3.2vw;
     font-weight: bold;
     color: var(--pentiary-color);
   }
 
   .infoTextContainer {
-    height: 25%;
+    height: 15%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     overflow: hidden;
-    max-height: 150px;
     max-width: 90%;
     margin-top: 1%;
     padding-left: 5px;
@@ -767,15 +862,14 @@ body {
     color: var(--pentiary-color);
     font: var(--ui-font);
     font-weight: bold;
-    line-height: 2.5em;
+    line-height: 3rem;
     padding: 0.25em 0.5em;
     font-size: 1vw;
   }
 
   .detailsContainer {
-    height: 35vh;
+    height: 35%;
     max-width: 90%;
-    max-height: 250px;
     display: flex;
     justify-content: flex-start;
     padding-left: 10px;
@@ -827,17 +921,3 @@ a {
   color: inherit;
   text-decoration: none;
 }
-
-/* * {
-  box-sizing: border-box;
-} */
-
-/* @media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
-} */
