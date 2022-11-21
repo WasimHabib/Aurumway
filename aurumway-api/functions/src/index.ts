@@ -8,36 +8,9 @@ var corsOptions = {
     optionsSuccessStatus: 200
   }
 app.use(cors(corsOptions));
-import('emailjs').then((emailjs) => {
-
-  
-   app.post('/sendEmail', (req: any, res:any) => {
-    let body = req.body;
-    let smtp = new emailjs.SMTPClient({
-        host: process.env.HOST,
-        user: process.env.USER,
-        password: process.env.App_Password_Mailbox,
-        ssl: true
+   app.get('/getAPIKey', (req: any, res:any) => {
+            res.send(process.env.API_KEY);
     });
-    smtp.send(
-        {
-            text: body.message,
-            from: body.email,
-            to: process.env.USER!,
-            subject: 'New Aurumway Contact',
-    }, (err:any, message:any) => {
-            if(err == null){
-                res.send("Email Sent Successfully");
-            }
-            else{
-                res.send("failed to send email: " + err);
-            }
-    });
-});
-    
 
 
-
-});
-
-export const AurumwayAPI = functions.runWith({secrets: ["HOST", "USER", "App_Password_Mailbox"]}).https.onRequest(app);
+export const AurumwayAPI = functions.runWith({secrets: ["API_KEY"]}).https.onRequest(app);
