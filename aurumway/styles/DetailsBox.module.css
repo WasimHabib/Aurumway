@@ -1,0 +1,33 @@
+.textContainer {
+  margin: auto;
+  width: 95%;
+  overflow: hidden;
+  overflow-y: scroll;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  border: 3px solid var(--quarternary-color);
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  height: 95%;
+}
+.text {
+  font: var(--ui-font);
+  font-weight: bold;
+
+  position: relative;
+  color: var(--pentiary-color);
+  padding: 0.5em 1em;
+  z-index: 1;
+  font-size: 1em;
+}
+
+.body {
+  background-color: blue;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}

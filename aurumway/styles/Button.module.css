@@ -1,0 +1,12 @@
+
+.INFO {
+    position: relative;
+    border-radius: 10px;
+    border: 3px solid var(--quarternary-color);
+    font: var(--ui-font);
+    font-weight: bold;
+    color: var(--pentiary-color);
+    background-color: var(--primary-color);
+    cursor: pointer;
+    overflow: hidden;
+}
