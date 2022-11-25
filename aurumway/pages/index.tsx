@@ -12,6 +12,7 @@ function Home() {
     " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
   let backDropRef = useRef<HTMLDivElement>(null);
   let entranceRef = useRef<HTMLDivElement>(null);
+  let infoRef = useRef<HTMLDivElement>(null);
   let mainRef = useRef<HTMLDivElement>(null);
   let headerText = "Welcome to Aurumway";
   let detailsText1 =
@@ -57,7 +58,7 @@ function Home() {
       delay: 0.5,
       repeat: 0,
     });
-
+    console.log(infoRef.current?.clientHeight);
     introTimeline.play();
   }, []);
 
@@ -103,27 +104,43 @@ function Home() {
         </div>
         <div ref={backDropRef} style={BackDropStyles} className="cont">
           <div ref={entranceRef} style={EntranceStyles} className="scroll-area">
-            <img src="balldrop.png" alt="" className="balldrop" />
-            <div className="imgContainer">
-              <div className="pittsburghimg"></div>
-            </div>
-            <div className="headerContainer">
-              <h1 className="indexHeader">{headerText}</h1>
-            </div>
-            <div className="infoTextContainer">
-              <h2 className="infoText">{infoText}</h2>
-            </div>
-            <div className="detailsContainer">
-              <div className="dbcont">
-                <DetailsBox className="detailsBox" bodytext={detailsText1} />
+            {/* <img src="balldrop.png" alt="" className="balldrop" /> */}
+            <div className="row h-100 pt-5 container pageContainer">
+              <div className="col h-100">
+                <div className="headerContainer row ">
+                  <h1 className="indexHeader">{headerText}</h1>
+                </div>
+                <div className="row infoTextContainer">
+                  <h2 className="infoText">{infoText}</h2>
+                </div>
+                <div className="row detailsContainer d-flex flex-row justify-content-center">
+                  <div className="col dbcont dbcontmain">
+                    <DetailsBox
+                      className="detailsBox"
+                      bodytext={detailsText1}
+                    />
+                  </div>
+                  <div className="col dbcont dbcontmain">
+                    <DetailsBox
+                      className="detailsBox"
+                      bodytext={detailsText2}
+                    />
+                  </div>
+                  <div className="col dbcont ">
+                    <DetailsBox
+                      className="detailsBox"
+                      bodytext={detailsText3}
+                    />
+                  </div>
+                </div>
               </div>
-              <div className="dbcont">
-                <DetailsBox className="detailsBox" bodytext={detailsText2} />
-              </div>
-              <div className="dbcont">
-                <DetailsBox className="detailsBox" bodytext={detailsText3} />
+              <div className="col pictureDiv h-100">
+                <div className="imgContainer">
+                  <div className="pittsburghimg"></div>
+                </div>
               </div>
             </div>
+
             <div className="scrollBelowContainer"></div>
           </div>
           <div ref={mainRef} style={MainStyles} className="scroll-area">
@@ -147,13 +164,13 @@ function Home() {
                   initialOpen={false}
                 />
               </div>
-              <div className={"infoContainer"}>
+              <div className={"infoContainer"} ref={infoRef}>
                 <InfoBox
                   Class="infoBox"
                   width="90%"
                   height="70%"
-                  hiddenHeight="150px"
-                  hiddenWidth="300px"
+                  hiddenHeight="30%"
+                  hiddenWidth="40%"
                   hasFooter={true}
                   direction="RIGHT"
                   bodytext={text}

@@ -44,6 +44,7 @@ export default function InfoBox(props: {
   let headerStyle: React.CSSProperties = {
     height: props.hasFooter ? "25%" : "25%",
     maxHeight: "3rem",
+    width: "100%",
     backgroundColor: colors.colorPrimary,
     cursor: "pointer",
   };
@@ -81,55 +82,21 @@ export default function InfoBox(props: {
         },
         0
       );
-      tl.fromTo(
-        bodyRef.current,
-        {
-          width: "100%",
-          ease: "power2.in",
-          duration: bodyAnimDuration,
-        },
-        {
-          width: props.hiddenWidth,
-          ease: "power2.in",
-          duration: bodyAnimDuration,
-        },
-        0
-      );
       //expand header
       tl.fromTo(
         headerRef.current,
         {
-          width: "100%",
           duration: bodyAnimDuration,
           backgroundColor: colors.colorQuarternary,
           ease: "power2.in",
         },
         {
-          width: props.hiddenWidth,
           duration: bodyAnimDuration,
           backgroundColor: colors.colorPrimary,
           ease: "power2.in",
         },
         0
       );
-
-      //expand footer
-      if (props.hasFooter && footerRef != null) {
-        tl.fromTo(
-          footerRef.current,
-          {
-            width: "100%",
-            duration: bodyAnimDuration,
-            ease: "power2.in",
-          },
-          {
-            width: props.hiddenWidth,
-            duration: bodyAnimDuration,
-            ease: "power2.in",
-          },
-          0
-        );
-      }
 
       //rotate cog
       tl.fromTo(
@@ -206,54 +173,20 @@ export default function InfoBox(props: {
         },
         0
       );
-
-      tl.fromTo(
-        bodyRef.current,
-        {
-          width: props.hiddenWidth,
-          duration: bodyAnimDuration,
-          ease: "power2.out",
-        },
-        {
-          width: "100%",
-          duration: bodyAnimDuration,
-          ease: "power2.out",
-        },
-        0
-      );
       tl.fromTo(
         headerRef.current,
         {
-          width: props.hiddenWidth,
           duration: bodyAnimDuration,
           backgroundColor: colors.colorPrimary,
           ease: "power2.out",
         },
         {
-          width: "100%",
           duration: bodyAnimDuration,
           backgroundColor: colors.colorQuarternary,
           ease: "power2.out",
         },
         0
       );
-
-      if (props.hasFooter && footerRef != null) {
-        tl.fromTo(
-          footerRef.current,
-          {
-            width: props.hiddenWidth,
-            duration: bodyAnimDuration,
-            ease: "power2.out",
-          },
-          {
-            width: "100%",
-            duration: bodyAnimDuration,
-            ease: "power2.out",
-          },
-          0
-        );
-      }
 
       tl.fromTo(
         iconRef.current,
