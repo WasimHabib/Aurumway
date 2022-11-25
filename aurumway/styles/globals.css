@@ -126,7 +126,14 @@ body {
   .skyline {
     height: 100vh;
   }
-
+  .contactForm {
+  }
+  .formContainer {
+    width: 80%;
+    margin: auto;
+  }
+  .imgContainer {
+  }
   .headerContainer {
     height: 15%;
     margin-top: 10%;
@@ -348,7 +355,14 @@ body {
     justify-content: space-around;
     padding-left: 10px;
   }
-
+  .contactForm {
+  }
+  .formContainer {
+    width: 50%;
+    margin: auto;
+  }
+  .imgContainer {
+  }
   .scrollBelowContainer {
   }
 
