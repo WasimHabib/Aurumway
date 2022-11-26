@@ -1,0 +1,37 @@
+.bodyContainer {
+  background-color: var(--alt-primary-color);
+  height: 100%;
+}
+.navbar {
+  background-color: var(--alt-primary-color);
+}
+.navLink {
+  color: var(--alt-quarternary-color);
+  font: var(--ui-font);
+  font-weight: bold;
+  font-size: 1.4em;
+}
+.hamburgerIcon {
+  background-color: var(--alt-secondary-color);
+
+  height: 1.3em;
+  float: right;
+  margin-right: 0.3em;
+  font-size: 2em;
+  border: 2px solid var(--alt-quarternary-color);
+}
+.navbarBrand {
+  font: var(--ui-font);
+  font-weight: bold;
+
+  font-size: 1.6em;
+  margin: auto;
+}
+@media all and (min-width: 21.5em) {
+  .navbarBrand {
+    font-size: 1.8em;
+  }
+  .hamburgerIcon {
+    height: 1.7em;
+  }
+}
