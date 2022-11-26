@@ -22,7 +22,7 @@
 }
 .title {
   font: var(--ui-font);
-  font-size: 1.6rem;
+  font-size: 1.3em;
   font-weight: bold;
   color: var(--pentiary-color);
 }

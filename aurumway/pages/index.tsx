@@ -170,7 +170,7 @@ function Home() {
                   width="90%"
                   height="70%"
                   hiddenHeight="30%"
-                  hiddenWidth="40%"
+                  hiddenWidth="70%"
                   hasFooter={true}
                   direction="RIGHT"
                   bodytext={text}

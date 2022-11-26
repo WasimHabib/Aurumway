@@ -20,6 +20,10 @@ body {
 
   /*Common fonts*/
   --ui-font: Helvetica, "Times New Roman", serif;
+  --alt-primary-color: #0a2342;
+  --alt-secondary-color: #00b4d8;
+  --alt-tertiary-color: #84bc9c;
+  --alt-quarternary-color: #fffdf7;
 }
 
 /* .scroll-area {
