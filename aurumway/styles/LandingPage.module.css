@@ -1,6 +1,37 @@
-.bodyContainer {
+.navContainer {
   background-color: var(--alt-primary-color);
   height: 100%;
+}
+.aboutOuterContainer {
+  background-color: var(--alt-primary-color);
+  width: 100%;
+  padding-top: 5rem;
+  min-height: 100vh;
+}
+.aboutContainer {
+  height: calc(100vh - 5rem);
+}
+.tileContainer {
+  background-image: url("../public/blue_background_mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+  margin-block: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  min-height: 25%;
+}
+.tileIcon {
+  height: 5rem;
+}
+.tileText {
+  display: flex;
+  justify-content: center;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--alt-quarternary-color);
 }
 .navbar {
   background-color: var(--alt-primary-color);
@@ -18,7 +49,6 @@
   float: right;
   margin-right: 0.3em;
   font-size: 2em;
-  border: 2px solid var(--alt-quarternary-color);
 }
 .navbarBrand {
   font: var(--ui-font);
@@ -27,11 +57,75 @@
   font-size: 1.6em;
   margin: auto;
 }
+.stockImg {
+  width: 100%;
+  border-radius: 20px;
+}
+.introContainer {
+  margin-top: 5rem;
+  min-height: 100vh;
+  background-color: var(--alt-primary-color);
+}
+.mainInfoContainer {
+  background-image: url("../public/blue_background_mobile.png");
+  background-size: cover;
+  border-radius: 20px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  height: 16.875rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.mainInfoImage {
+  width: 70%;
+}
+.arwButton {
+  color: var(--alt-quarternary-color);
+  font-size: 1.2em;
+  background-color: var(--alt-tertiary-color);
+  font-weight: 700;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 3.5rem;
+  max-width: 13rem;
+  margin: auto;
+  cursor: pointer;
+}
+.mainInfoDesc {
+  color: var(--alt-quarternary-color);
+  font-weight: 700;
+  font-size: 1.2em;
+  margin-right: 1%;
+}
+.mainInfomiddleImage {
+  width: 100%;
+}
+.mainImgContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.introHeader {
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  color: var(--alt-quarternary-color);
+}
 @media all and (min-width: 21.5em) {
   .navbarBrand {
     font-size: 1.8em;
   }
   .hamburgerIcon {
     height: 1.7em;
+  }
+}
+
+@media all and (min-width: 36em) {
+  .navItem {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
 }
