@@ -9,6 +9,11 @@ export const LandingPage = (props: {}) => {
   let learnMoreRef = useRef<HTMLDivElement>(null);
   let aboutOuterRef = useRef<HTMLDivElement>(null);
   let navRef = useRef<HTMLDivElement>(null);
+  let titleLabel = "Contact";
+  let emailLabel = "Email Address:";
+  let nameLabel = "Name:";
+  let companyLabel = "Company:";
+  let messageLabel = "Message:";
   let mainInfoDesc =
     "Our SAP-certified experts deliver comprehensive ERP solutions and support for all of your business needs.";
   let learnMoreText = "Learn More";
@@ -134,6 +139,52 @@ export const LandingPage = (props: {}) => {
               <p className={styles.tileText}>{val.text}</p>
             </div>
           ))}
+        </div>
+      </div>
+      <div className={"container-fluid " + styles.contactOuterContainer}>
+        <div className={" " + styles.contactContainer}>
+          <div className={"row " + styles.contactTitle}>{titleLabel}</div>
+          <div className={styles.formContainer}>
+            <div className={"row " + styles.formGroup}>
+              <div className={"col-sm "}>
+                <label
+                  style={{ paddingTop: "1rem" }}
+                  className={"d-block " + styles.formLabel}
+                >
+                  {nameLabel}
+                </label>
+                <input type="text" className={styles.formInput} />
+              </div>
+              <div className={"col-sm "}>
+                <label
+                  style={{ paddingTop: "1rem" }}
+                  className={"d-block " + styles.formLabel}
+                >
+                  {emailLabel}
+                </label>
+                <input type="text" className={styles.formInput} />
+              </div>
+            </div>
+            <div className={"form-row " + styles.formGroup}>
+              <div className={"col "}>
+                <label className={"d-block " + styles.formLabel}>
+                  {companyLabel}
+                </label>
+                <input type="text" className={styles.formInput} />
+              </div>
+            </div>
+            <div className={"form-row " + styles.formGroup}>
+              <div className={"col "}>
+                <label className={"d-block " + styles.formLabel}>
+                  {messageLabel}
+                </label>
+                <textarea
+                  style={{ minHeight: "10rem" }}
+                  className={styles.formInput}
+                ></textarea>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>
