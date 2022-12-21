@@ -20,6 +20,7 @@
 .formContainer {
   padding-inline: 1rem;
   width: 100%;
+  min-height: 70vh;
 }
 .formInput {
   width: 100%;
@@ -53,7 +54,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 100%;
 }
 .aboutContainer {
   min-height: calc(100vh - 5rem);
@@ -68,7 +68,8 @@
   justify-content: flex-end;
   flex-direction: column;
   align-items: center;
-  min-height: 12rem;
+  min-height: 7rem;
+  max-height: 12rem;
 }
 .tileIcon {
   max-height: 5rem;
@@ -126,6 +127,11 @@
 }
 .mainInfoImage {
   width: 70%;
+  max-width: 10rem;
+}
+.mainInfomiddleImage {
+  width: 100%;
+  max-width: 10rem;
 }
 .arwButton {
   color: var(--alt-quarternary-color);
@@ -145,11 +151,12 @@
   color: var(--alt-quarternary-color);
   font-weight: 700;
   font-size: 1.2em;
+  margin: 0px;
+  padding: 0px;
   margin-right: 1%;
+  padding-block: 1rem;
 }
-.mainInfomiddleImage {
-  width: 100%;
-}
+
 .mainImgContainer {
   display: flex;
   justify-content: center;
@@ -161,7 +168,7 @@
   font-weight: 700;
   color: var(--alt-quarternary-color);
 }
-@media all and (min-width: 21.5em) {
+@media all and (min-width: 21.5rem) {
   .navbarBrand {
     font-size: 1.8em;
   }
@@ -170,9 +177,38 @@
   }
 }
 
-@media all and (min-width: 36em) {
+@media all and (min-width: 48rem) {
+  .tileContainer {
+    justify-content: flex-start;
+    margin-inline: 5%;
+    min-height: 30rem;
+    max-width: 30rem;
+  }
+
+  .aboutContainer {
+    align-items: center;
+    justify-content: center;
+  }
+  .tileText {
+    font-size: 1.2rem;
+  }
+
+  .contactContainer {
+    max-width: calc(100vw - 20%);
+    min-width: calc(100vw - 30%);
+  }
+}
+
+/*Tablet*/
+@media all and (min-width: 50.8125rem) {
+}
+
+@media all and (min-width: 36rem) {
   .navItem {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
   }
+}
+/*Desktop*/
+@media all and (min-width: 139rem) {
 }

@@ -6,9 +6,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 export const LandingPage = (props: {}) => {
   let headerText = "ERP Solutions";
   let key = 0;
-  let learnMoreRef = useRef<HTMLDivElement>(null);
-  let aboutOuterRef = useRef<HTMLDivElement>(null);
-  let navRef = useRef<HTMLDivElement>(null);
+  let imgContRef = useRef<HTMLDivElement>(null);
+  let imgRef = useRef<HTMLImageElement>(null);
+  let parRef = useRef<HTMLParagraphElement>(null);
+  let textAreaRef = useRef<HTMLTextAreaElement>(null);
+  let formContRef = useRef<HTMLDivElement>(null);
   let titleLabel = "Contact";
   let emailLabel = "Email Address:";
   let nameLabel = "Name:";
@@ -18,11 +20,37 @@ export const LandingPage = (props: {}) => {
     "Our SAP-certified experts deliver comprehensive ERP solutions and support for all of your business needs.";
   let learnMoreText = "Learn More";
 
-  useLayoutEffect(() => {}, []);
+  useLayoutEffect(() => {
+    parRef!.current!.style.marginLeft =
+      (imgContRef!.current!.clientWidth - imgRef!.current!.clientWidth) / 2 +
+      "px";
+    parRef!.current!.style.marginRight =
+      (imgContRef!.current!.clientWidth - imgRef!.current!.clientWidth) / 2 +
+      "px";
+    textAreaRef!.current!.style.height =
+      formContRef!.current!.clientHeight -
+      textAreaRef!.current!.clientHeight +
+      "px";
 
+    console.log(formContRef!.current!.clientHeight + "px");
+    console.log(textAreaRef!.current!.clientHeight + "px");
+
+    window.addEventListener("resize", () => {
+      parRef!.current!.style.marginLeft =
+        (imgContRef!.current!.clientWidth - imgRef!.current!.clientWidth) / 2 +
+        "px";
+      parRef!.current!.style.marginRight =
+        (imgContRef!.current!.clientWidth - imgRef!.current!.clientWidth) / 2 +
+        "px";
+      textAreaRef!.current!.style.height =
+        formContRef!.current!.clientHeight -
+        textAreaRef!.current!.clientHeight +
+        "px";
+    });
+  });
   return (
     <>
-      <div ref={navRef} className={"container-fluid " + styles.navContainer}>
+      <div className={"container-fluid " + styles.navContainer}>
         <nav
           className={
             "nav navbar navbar-expand-sm fixed-top navbar-dark " + styles.navbar
@@ -61,10 +89,7 @@ export const LandingPage = (props: {}) => {
           </div>
         </nav>
       </div>
-      <div
-        ref={learnMoreRef}
-        className={"container-fluid " + styles.introContainer}
-      >
+      <div className={"container-fluid " + styles.introContainer}>
         <div className={"row "}>
           <div className={"col "}>
             <h1 className={styles.introHeader}>{headerText}</h1>
@@ -83,8 +108,12 @@ export const LandingPage = (props: {}) => {
           <div className={"col "}>
             <div className={styles.mainInfoContainer}>
               <div className={"row "}>
-                <div className={"col-4 px-0 ps-1 " + styles.mainImgContainer}>
+                <div
+                  ref={imgContRef}
+                  className={"col-4 px-0 ps-1 " + styles.mainImgContainer}
+                >
                   <img
+                    ref={imgRef}
                     className={styles.mainInfoImage}
                     src="SAP-S4-HANA_icon.png"
                     alt=""
@@ -105,8 +134,10 @@ export const LandingPage = (props: {}) => {
                   />
                 </div>
               </div>
-              <div className={"row p-2"}>
-                <p className={"col " + styles.mainInfoDesc}>{mainInfoDesc}</p>
+              <div className={"row "}>
+                <p ref={parRef} className={"col " + styles.mainInfoDesc}>
+                  {mainInfoDesc}
+                </p>
               </div>
             </div>
           </div>
@@ -117,20 +148,10 @@ export const LandingPage = (props: {}) => {
           </div>
         </div>
       </div>
-      <div
-        ref={aboutOuterRef}
-        className={
-          "container-fluid d-flex flex-column justify-content-around " +
-          styles.aboutOuterContainer
-        }
-      >
-        <div
-          className={
-            "d-flex flex-column justify-content-around " + styles.aboutContainer
-          }
-        >
+      <div className={"container-fluid " + styles.aboutOuterContainer}>
+        <div className={"row mx-0 " + styles.aboutContainer}>
           {getAboutPageTiles().map((val) => (
-            <div key={key++} className={styles.tileContainer}>
+            <div key={key++} className={"col-md " + styles.tileContainer}>
               <img
                 src={val.url}
                 alt="performance_gauge_mobile"
@@ -144,7 +165,7 @@ export const LandingPage = (props: {}) => {
       <div className={"container-fluid " + styles.contactOuterContainer}>
         <div className={" " + styles.contactContainer}>
           <div className={"row " + styles.contactTitle}>{titleLabel}</div>
-          <div className={styles.formContainer}>
+          <div ref={formContRef} className={styles.formContainer}>
             <div className={"row " + styles.formGroup}>
               <div className={"col-sm "}>
                 <label
@@ -179,7 +200,8 @@ export const LandingPage = (props: {}) => {
                   {messageLabel}
                 </label>
                 <textarea
-                  style={{ minHeight: "10rem" }}
+                  ref={textAreaRef}
+                  style={{}}
                   className={styles.formInput}
                 ></textarea>
               </div>
@@ -210,5 +232,3 @@ function getAboutPageTiles(): any[] {
   };
   return result;
 }
-
-function calculateAboutMargin() {}
