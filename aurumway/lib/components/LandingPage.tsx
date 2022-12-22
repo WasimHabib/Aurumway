@@ -28,12 +28,7 @@ export const LandingPage = (props: {}) => {
       (imgContRef!.current!.clientWidth - imgRef!.current!.clientWidth) / 2 +
       "px";
     textAreaRef!.current!.style.height =
-      formContRef!.current!.clientHeight -
-      textAreaRef!.current!.clientHeight +
-      "px";
-
-    console.log(formContRef!.current!.clientHeight + "px");
-    console.log(textAreaRef!.current!.clientHeight + "px");
+      formContRef!.current!.clientHeight / 2 + "px";
 
     window.addEventListener("resize", () => {
       parRef!.current!.style.marginLeft =
@@ -43,9 +38,12 @@ export const LandingPage = (props: {}) => {
         (imgContRef!.current!.clientWidth - imgRef!.current!.clientWidth) / 2 +
         "px";
       textAreaRef!.current!.style.height =
-        formContRef!.current!.clientHeight -
-        textAreaRef!.current!.clientHeight +
-        "px";
+        formContRef!.current!.clientHeight / 2 + "px";
+    });
+
+    window.addEventListener("DOMContentLoaded", () => {
+      textAreaRef!.current!.style.height =
+        formContRef!.current!.clientHeight / 2 + "px";
     });
   });
   return (
@@ -96,7 +94,7 @@ export const LandingPage = (props: {}) => {
           </div>
         </div>
         <div className={"row "}>
-          <div className={"col "}>
+          <div className={"col d-flex justify-content-center"}>
             <img
               className={styles.stockImg}
               src="tech_stock_laptop.jpg"
@@ -140,6 +138,22 @@ export const LandingPage = (props: {}) => {
                 </p>
               </div>
             </div>
+            <div className={" " + styles.mainInfoContainerDesktop}>
+              {getInfoImgObjects().map((val, index) => {
+                return (
+                  <div
+                    key={index}
+                    className={" " + styles.mainImgContainerDesktop}
+                  >
+                    <img
+                      src={val.src}
+                      alt="Info_Img"
+                      className={" " + styles.mainInfoImageDesktop}
+                    />
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
         <div className={"row "}>
@@ -158,6 +172,7 @@ export const LandingPage = (props: {}) => {
                 className={styles.tileIcon}
               />
               <p className={styles.tileText}>{val.text}</p>
+              <p className={styles.tileDesc}>{val.desc}</p>
             </div>
           ))}
         </div>
@@ -219,16 +234,33 @@ function getAboutPageTiles(): any[] {
     name: "perfTile",
     url: "performance_icon_mobile_mini.png",
     text: "Fast Performance",
+    desc: "With 2 decades of experience with maintaining ERP Systems, our talented employees can deliver even in the most technical of requirements for your business, all in an efficient and effective manner.  ",
   };
   result[1] = {
     name: "innTile",
     url: "lightbulb_mobile.png",
     text: "Innovative Solutions",
+    desc: "It’s often said that necessity is the mother of invention, but we believe that innovation is a matter of passion. Our ERP specialists are dedicated specialists who love what they do. You can be sure that your business receives the most talented and creative minds out there",
   };
   result[2] = {
     name: "flexTile",
     url: "flexible_pricing_icon.png",
     text: "Flexible Pricing",
+    desc: "Though our specialists are some of the best, there’s no reason to break the bank when it comes to hiring them. AurumWay offers flexible pricing to create mutual benefit with our partners.",
+  };
+  return result;
+}
+
+function getInfoImgObjects() {
+  let result: any[] = [];
+  result[0] = {
+    src: "SAP-S4-HANA_icon.png",
+  };
+  result[1] = {
+    src: "sap_successfactors_icon.png",
+  };
+  result[2] = {
+    src: "sap_field_glass_icon.png",
   };
   return result;
 }
