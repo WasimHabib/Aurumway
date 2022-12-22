@@ -207,15 +207,17 @@
   .mainImgContainerDesktop {
     background-image: url("../public/blue_background_mobile.png");
     background-size: cover;
-    min-width: 30vw;
+    height: 40vw;
+    max-height: 30rem;
+    width: 30vw;
+    max-width: 30rem;
     display: flex;
     justify-content: center;
-    min-height: 20vw;
     border-radius: 20px;
   }
   .mainInfoImageDesktop {
     height: 12vw;
-    max-height: 15rem;
+    max-height: 10rem;
     margin-block: 1rem;
   }
   .mainInfoContainer {
@@ -230,8 +232,17 @@
     justify-content: center;
   }
   .contactContainer {
-    max-width: calc(100vw - 20%);
-    min-width: calc(100vw - 30%);
+    max-width: 100rem;
+    width: calc(100vw - 30%);
+  }
+  .introContainer {
+    max-width: 100rem;
+  }
+  .aboutOuterContainer {
+    max-width: 100rem;
+  }
+  .contactOuterContainer {
+    max-width: 100rem;
   }
 }
 

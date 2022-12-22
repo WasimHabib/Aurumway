@@ -240,7 +240,7 @@ function getAboutPageTiles(): any[] {
     name: "innTile",
     url: "lightbulb_mobile.png",
     text: "Innovative Solutions",
-    desc: "It’s often said that necessity is the mother of invention, but we believe that innovation is a matter of passion. Our ERP specialists are dedicated specialists who love what they do. You can be sure that your business receives the most talented and creative minds out there",
+    desc: "It’s often said that necessity is the mother of invention, but we believe that innovation is a matter of passion. Our ERP specialists are dedicated specialists who love what they do. You can be sure that your business receives the most talented and creative minds out there.",
   };
   result[2] = {
     name: "flexTile",
