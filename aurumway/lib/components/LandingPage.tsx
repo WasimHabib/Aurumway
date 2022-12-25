@@ -11,15 +11,27 @@ export const LandingPage = (props: {}) => {
   let parRef = useRef<HTMLParagraphElement>(null);
   let textAreaRef = useRef<HTMLTextAreaElement>(null);
   let formContRef = useRef<HTMLDivElement>(null);
+  let bodyRef = useRef<HTMLDivElement>(null);
+  let navRef = useRef<HTMLDivElement>(null);
+  let introRef = useRef<HTMLDivElement>(null);
+  let aboutRef = useRef<HTMLDivElement>(null);
+  let contactRef = useRef<HTMLDivElement>(null);
+  let arrVals: any[] = [];
   let titleLabel = "Contact";
   let emailLabel = "Email Address:";
   let nameLabel = "Name:";
   let companyLabel = "Company:";
   let messageLabel = "Message:";
+  let SubmitText = "Submit";
   let mainInfoDesc =
     "Our SAP-certified experts deliver comprehensive ERP solutions and support for all of your business needs.";
   let learnMoreText = "Learn More";
-
+  function scrollPage(index: number, arrVals: any[]) {
+    window.scrollTo({
+      behavior: "smooth",
+      top: arrVals[index],
+    });
+  }
   useLayoutEffect(() => {
     parRef!.current!.style.marginLeft =
       (imgContRef!.current!.clientWidth - imgRef!.current!.clientWidth) / 2 +
@@ -41,14 +53,15 @@ export const LandingPage = (props: {}) => {
         formContRef!.current!.clientHeight / 2 + "px";
     });
 
-    window.addEventListener("DOMContentLoaded", () => {
-      textAreaRef!.current!.style.height =
-        formContRef!.current!.clientHeight / 2 + "px";
-    });
+    arrVals[0] = 0;
+    arrVals[1] = introRef!.current!.getBoundingClientRect().height;
+    arrVals[2] =
+      aboutRef!.current!.getBoundingClientRect().height +
+      introRef!.current!.getBoundingClientRect().height;
   });
   return (
-    <>
-      <div className={"container-fluid " + styles.navContainer}>
+    <div ref={bodyRef}>
+      <div ref={navRef} className={"container-fluid " + styles.navContainer}>
         <nav
           className={
             "nav navbar navbar-expand-sm fixed-top navbar-dark " + styles.navbar
@@ -69,17 +82,26 @@ export const LandingPage = (props: {}) => {
           <div className="collapse navbar-collapse" id="navBarNav">
             <ul className="navbar-nav mr-auto">
               <li className={"nav-item " + styles.navItem}>
-                <a href="#" className={"nav-link " + styles.navLink}>
+                <a
+                  onClick={() => scrollPage(0, arrVals)}
+                  className={"nav-link " + styles.navLink}
+                >
                   Home
                 </a>
               </li>
               <li className={"nav-item " + styles.navItem}>
-                <a href="#" className={"nav-link " + styles.navLink}>
+                <a
+                  onClick={() => scrollPage(1, arrVals)}
+                  className={"nav-link " + styles.navLink}
+                >
                   About
                 </a>
               </li>
               <li className={"nav-item " + styles.navItem}>
-                <a href="#" className={"nav-link " + styles.navLink}>
+                <a
+                  onClick={() => scrollPage(2, arrVals)}
+                  className={"nav-link " + styles.navLink}
+                >
                   Contact
                 </a>
               </li>
@@ -87,7 +109,10 @@ export const LandingPage = (props: {}) => {
           </div>
         </nav>
       </div>
-      <div className={"container-fluid " + styles.introContainer}>
+      <div
+        ref={introRef}
+        className={"container-fluid " + styles.introContainer}
+      >
         <div className={"row "}>
           <div className={"col "}>
             <h1 className={styles.introHeader}>{headerText}</h1>
@@ -156,13 +181,23 @@ export const LandingPage = (props: {}) => {
             </div>
           </div>
         </div>
-        <div className={"row "}>
+        <div className={"row " + styles.arwButtonContainer}>
           <div className={"col mb-3"}>
-            <div className={styles.arwButton}>{learnMoreText}</div>
+            <div
+              className={styles.arwButton}
+              onClick={() => {
+                scrollPage(1, arrVals);
+              }}
+            >
+              {learnMoreText}
+            </div>
           </div>
         </div>
       </div>
-      <div className={"container-fluid " + styles.aboutOuterContainer}>
+      <div
+        ref={aboutRef}
+        className={"container-fluid " + styles.aboutOuterContainer}
+      >
         <div className={"row mx-0 " + styles.aboutContainer}>
           {getAboutPageTiles().map((val) => (
             <div key={key++} className={"col-md " + styles.tileContainer}>
@@ -177,7 +212,10 @@ export const LandingPage = (props: {}) => {
           ))}
         </div>
       </div>
-      <div className={"container-fluid " + styles.contactOuterContainer}>
+      <div
+        ref={contactRef}
+        className={"container-fluid " + styles.contactOuterContainer}
+      >
         <div className={" " + styles.contactContainer}>
           <div className={"row " + styles.contactTitle}>{titleLabel}</div>
           <div ref={formContRef} className={styles.formContainer}>
@@ -221,10 +259,17 @@ export const LandingPage = (props: {}) => {
                 ></textarea>
               </div>
             </div>
+            <div className={"form-row " + styles.submitButtonRow}>
+              <div className={"col col-sm " + styles.submitButtonColumn}>
+                <button className={"btn btn-success " + styles.submitButton}>
+                  {SubmitText}
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

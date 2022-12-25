@@ -5,12 +5,12 @@
 .aboutOuterContainer {
   background-color: var(--alt-primary-color);
   width: 100%;
-  padding-top: 5rem;
+  /* margin-top: 5rem; */
   min-height: 100vh;
 }
 .contactOuterContainer {
   min-height: 100vh;
-  padding-top: 5rem;
+  /* margin-top: 5rem; */
   width: 100%;
   background-color: var(--alt-primary-color);
   display: flex;
@@ -165,7 +165,14 @@
   margin-right: 1%;
   padding-block: 1rem;
 }
-
+.submitButtonRow {
+  padding-inline: 1rem;
+  margin-block: 1rem;
+}
+.submitButtonColumn {
+  display: flex;
+  justify-content: center;
+}
 .mainImgContainer {
   display: flex;
   justify-content: center;
@@ -193,10 +200,12 @@
     min-height: 30rem;
     max-width: 30rem;
   }
-
+  .submitButtonColumn {
+    display: initial;
+  }
   .aboutContainer {
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
   }
   .mainInfoContainerDesktop {
     margin-top: 1rem;
@@ -234,15 +243,24 @@
   .contactContainer {
     max-width: 100rem;
     width: calc(100vw - 30%);
+    min-height: 0vh;
+  }
+  .formContainer {
+    min-height: 0vh;
   }
   .introContainer {
     max-width: 100rem;
   }
   .aboutOuterContainer {
     max-width: 100rem;
+    margin-top: 5rem;
   }
   .contactOuterContainer {
     max-width: 100rem;
+    margin-top: 5rem;
+  }
+  .arwButtonContainer {
+    display: none;
   }
 }
 
@@ -260,6 +278,9 @@
   .aboutContainer {
     min-height: calc(50vh - 5rem);
   }
+  .arwButtonContainer {
+    display: none;
+  }
 }
 
 /*Tablet*/
@@ -274,4 +295,39 @@
 }
 /*Desktop*/
 @media all and (min-width: 139rem) {
+  .formInput {
+    font-size: 2.5rem;
+  }
+  .contactTitle {
+    font-size: 3rem;
+  }
+  .formLabel {
+    font-size: 2.5rem;
+  }
+  .contactOuterContainer {
+    min-height: 0vh;
+  }
+  .tileText {
+    font-size: 2rem;
+  }
+  .tileContainer {
+    min-height: 40rem;
+    margin-inline: 0rem;
+    overflow: hidden;
+  }
+  .tileDesc {
+    font-size: 1.4rem;
+  }
+  .tileIcon {
+    height: 8rem;
+  }
+  .navbarBrand {
+    font-size: 3rem;
+  }
+  .navLink {
+    font-size: 2.5rem;
+  }
+  .introContainer {
+    margin-top: 6rem;
+  }
 }
