@@ -84,6 +84,38 @@
   font-weight: 700;
   color: var(--alt-quarternary-color);
 }
+.spinner {
+  position: relative;
+  height: 200px;
+  margin: auto;
+}
+.overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+  z-index: 7; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+  justify-content: center;
+  align-items: center;
+}
+.symbolContainer {
+  background-color: black;
+  border: 5px solid var(--quarternary-color);
+  border-radius: 20px;
+  height: 300px;
+  width: 300px;
+  margin: auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .tileDesc {
   display: none;
   font-size: 1rem;
@@ -325,7 +357,7 @@
     font-size: 3rem;
   }
   .navLink {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   .introContainer {
     margin-top: 6rem;

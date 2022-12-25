@@ -1,7 +1,10 @@
 import React, { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
+import { sendEmail } from "../services/commonFuncs";
 import styles from "../../styles/LandingPage.module.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export const LandingPage = (props: {}) => {
   let headerText = "ERP Solutions";
@@ -16,6 +19,10 @@ export const LandingPage = (props: {}) => {
   let introRef = useRef<HTMLDivElement>(null);
   let aboutRef = useRef<HTMLDivElement>(null);
   let contactRef = useRef<HTMLDivElement>(null);
+  let nameRef = useRef<HTMLInputElement>(null);
+  let companyRef = useRef<HTMLInputElement>(null);
+  let emailRef = useRef<HTMLInputElement>(null);
+  let loadingRef = useRef<HTMLDivElement>(null);
   let arrVals: any[] = [];
   let titleLabel = "Contact";
   let emailLabel = "Email Address:";
@@ -31,6 +38,38 @@ export const LandingPage = (props: {}) => {
       behavior: "smooth",
       top: arrVals[index],
     });
+  }
+  function submitForm() {
+    sendEmail(
+      nameRef!.current!.value,
+      "",
+      emailRef!.current!.value,
+      textAreaRef!.current!.value
+    )
+      .then((res) => {
+        loadingRef.current!.style.display = "none";
+        const successToast = toast.success(
+          "Email Sent! Thank you for your business!",
+          {
+            autoClose: 2000,
+            position: toast.POSITION.TOP_CENTER,
+            theme: "colored",
+            hideProgressBar: true,
+          }
+        );
+      })
+      .catch((err) => {
+        loadingRef.current!.style.display = "none";
+        const failureToast = toast.error(
+          "Unable to Send Email. Try again in a little bit.",
+          {
+            autoClose: 2000,
+            position: toast.POSITION.TOP_CENTER,
+            theme: "colored",
+            hideProgressBar: true,
+          }
+        );
+      });
   }
   useLayoutEffect(() => {
     parRef!.current!.style.marginLeft =
@@ -61,6 +100,16 @@ export const LandingPage = (props: {}) => {
   });
   return (
     <div ref={bodyRef}>
+      <ToastContainer />
+      <div ref={loadingRef} className={styles.overlay}>
+        <div className={styles.symbolContainer}>
+          <img
+            src="loading-76.webp"
+            alt="loading.gif..."
+            className={styles.spinner}
+          />
+        </div>
+      </div>
       <div ref={navRef} className={"container-fluid " + styles.navContainer}>
         <nav
           className={
@@ -227,7 +276,7 @@ export const LandingPage = (props: {}) => {
                 >
                   {nameLabel}
                 </label>
-                <input type="text" className={styles.formInput} />
+                <input type="text" className={styles.formInput} ref={nameRef} />
               </div>
               <div className={"col-sm "}>
                 <label
@@ -236,7 +285,11 @@ export const LandingPage = (props: {}) => {
                 >
                   {emailLabel}
                 </label>
-                <input type="text" className={styles.formInput} />
+                <input
+                  type="text"
+                  className={styles.formInput}
+                  ref={emailRef}
+                />
               </div>
             </div>
             <div className={"form-row " + styles.formGroup}>
@@ -244,7 +297,11 @@ export const LandingPage = (props: {}) => {
                 <label className={"d-block " + styles.formLabel}>
                   {companyLabel}
                 </label>
-                <input type="text" className={styles.formInput} />
+                <input
+                  type="text"
+                  className={styles.formInput}
+                  ref={companyRef}
+                />
               </div>
             </div>
             <div className={"form-row " + styles.formGroup}>
@@ -254,14 +311,17 @@ export const LandingPage = (props: {}) => {
                 </label>
                 <textarea
                   ref={textAreaRef}
-                  style={{}}
+                  style={{ resize: "none" }}
                   className={styles.formInput}
                 ></textarea>
               </div>
             </div>
             <div className={"form-row " + styles.submitButtonRow}>
               <div className={"col col-sm " + styles.submitButtonColumn}>
-                <button className={"btn btn-success " + styles.submitButton}>
+                <button
+                  onClick={submitForm}
+                  className={"btn btn-success " + styles.submitButton}
+                >
                   {SubmitText}
                 </button>
               </div>
