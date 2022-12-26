@@ -2,8 +2,19 @@ import React from "react";
 import styles from "../../styles/LandingPage.module.css";
 export const AboutPage = () => {
   let key = 0;
+  let aboutHeader = "About AurumWay";
+  let ceoText = "";
   return (
     <div className={"container-fluid " + styles.aboutOuterContainer}>
+      <div className={" " + styles.personalInfo}>
+        {" "}
+        {/*d-flex flex-column justify-content-center  */}
+        <h1 className={" " + styles.introHeader}>{aboutHeader}</h1>
+        <img className={" " + styles.ceoPhoto} src="" alt="" />
+        <div className={" " + styles.arwButton}>
+          <p className={" " + styles.AboutDescription}>{ceoText}</p>
+        </div>
+      </div>
       <div className={"row mx-0 " + styles.aboutContainer}>
         {getAboutPageTiles().map((val) => (
           <div key={key++} className={"col-md " + styles.tileContainer}>

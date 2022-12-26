@@ -2,15 +2,16 @@
   background-color: var(--alt-primary-color);
   height: 100%;
 }
-
+.personalInfo {
+  display: none;
+}
 .aboutOuterContainer {
   background-color: var(--alt-primary-color);
   width: 100%;
   margin-top: 5rem;
-  min-height: 100vh;
 }
 .contactOuterContainer {
-  min-height: 100vh;
+  min-height: 0vh;
   margin-top: 5rem;
   width: 100%;
   background-color: var(--alt-primary-color);
@@ -288,11 +289,10 @@
   }
   .aboutOuterContainer {
     max-width: 100rem;
-    margin-top: 5rem;
+    margin-top: 8rem;
   }
   .contactOuterContainer {
     max-width: 100rem;
-    margin-top: 5rem;
   }
   .arwButtonContainer {
     display: none;
