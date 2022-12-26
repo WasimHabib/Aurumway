@@ -1,7 +1,7 @@
 import React, { useLayoutEffect, useRef } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import { sendEmail } from "../services/commonFuncs";
-import styles from "../../styles/ContactPage.module.css";
+import styles from "../../styles/LandingPage.module.css";
 export const ContactPage = () => {
   let imgContRef = useRef<HTMLDivElement>(null);
   let imgRef = useRef<HTMLImageElement>(null);
@@ -63,31 +63,13 @@ export const ContactPage = () => {
   }
 
   useLayoutEffect(() => {
-    parRef!.current!.style.marginLeft =
-      (imgContRef!.current!.clientWidth - imgRef!.current!.clientWidth) / 2 +
-      "px";
-    parRef!.current!.style.marginRight =
-      (imgContRef!.current!.clientWidth - imgRef!.current!.clientWidth) / 2 +
-      "px";
     textAreaRef!.current!.style.height =
       formContRef!.current!.clientHeight / 2 + "px";
 
     window.addEventListener("resize", () => {
-      parRef!.current!.style.marginLeft =
-        (imgContRef!.current!.clientWidth - imgRef!.current!.clientWidth) / 2 +
-        "px";
-      parRef!.current!.style.marginRight =
-        (imgContRef!.current!.clientWidth - imgRef!.current!.clientWidth) / 2 +
-        "px";
       textAreaRef!.current!.style.height =
         formContRef!.current!.clientHeight / 2 + "px";
     });
-
-    arrVals[0] = 0;
-    arrVals[1] = introRef!.current!.getBoundingClientRect().height;
-    arrVals[2] =
-      aboutRef!.current!.getBoundingClientRect().height +
-      introRef!.current!.getBoundingClientRect().height;
   });
 
   return (

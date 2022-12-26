@@ -41,42 +41,42 @@ export const LandingPage = (props: {}) => {
       top: arrVals[index],
     });
   }
-  function submitForm() {
-    loadingRef.current!.style.display = "flex";
-    sendEmail(
-      nameRef!.current!.value,
-      "",
-      emailRef!.current!.value,
-      textAreaRef!.current!.value
-    )
-      .then((res) => {
-        loadingRef.current!.style.display = "none";
-        const successToast = toast.success(
-          "Email Sent! Thank you for your business!",
-          {
-            autoClose: 2000,
-            position: toast.POSITION.TOP_CENTER,
-            theme: "colored",
-            hideProgressBar: true,
-          }
-        );
-      })
-      .catch((err) => {
-        loadingRef.current!.style.display = "none";
-        const failureToast = toast.error(
-          "Unable to Send Email. Try again in a little bit.",
-          {
-            autoClose: 2000,
-            position: toast.POSITION.TOP_CENTER,
-            theme: "colored",
-            hideProgressBar: true,
-          }
-        );
-      })
-      .finally(() => {
-        loadingRef.current!.style.display = "none";
-      });
-  }
+  // function submitForm() {
+  //   loadingRef.current!.style.display = "flex";
+  //   sendEmail(
+  //     nameRef!.current!.value,
+  //     "",
+  //     emailRef!.current!.value,
+  //     textAreaRef!.current!.value
+  //   )
+  //     .then((res) => {
+  //       loadingRef.current!.style.display = "none";
+  //       const successToast = toast.success(
+  //         "Email Sent! Thank you for your business!",
+  //         {
+  //           autoClose: 2000,
+  //           position: toast.POSITION.TOP_CENTER,
+  //           theme: "colored",
+  //           hideProgressBar: true,
+  //         }
+  //       );
+  //     })
+  //     .catch((err) => {
+  //       loadingRef.current!.style.display = "none";
+  //       const failureToast = toast.error(
+  //         "Unable to Send Email. Try again in a little bit.",
+  //         {
+  //           autoClose: 2000,
+  //           position: toast.POSITION.TOP_CENTER,
+  //           theme: "colored",
+  //           hideProgressBar: true,
+  //         }
+  //       );
+  //     })
+  //     .finally(() => {
+  //       loadingRef.current!.style.display = "none";
+  //     });
+  // }
   useLayoutEffect(() => {
     parRef!.current!.style.marginLeft =
       (imgContRef!.current!.clientWidth - imgRef!.current!.clientWidth) / 2 +
@@ -84,8 +84,8 @@ export const LandingPage = (props: {}) => {
     parRef!.current!.style.marginRight =
       (imgContRef!.current!.clientWidth - imgRef!.current!.clientWidth) / 2 +
       "px";
-    textAreaRef!.current!.style.height =
-      formContRef!.current!.clientHeight / 2 + "px";
+    // textAreaRef!.current!.style.height =
+    //   formContRef!.current!.clientHeight / 2 + "px";
 
     window.addEventListener("resize", () => {
       parRef!.current!.style.marginLeft =
@@ -94,19 +94,19 @@ export const LandingPage = (props: {}) => {
       parRef!.current!.style.marginRight =
         (imgContRef!.current!.clientWidth - imgRef!.current!.clientWidth) / 2 +
         "px";
-      textAreaRef!.current!.style.height =
-        formContRef!.current!.clientHeight / 2 + "px";
+      // textAreaRef!.current!.style.height =
+      //   formContRef!.current!.clientHeight / 2 + "px";
     });
 
-    arrVals[0] = 0;
-    arrVals[1] = introRef!.current!.getBoundingClientRect().height;
-    arrVals[2] =
-      aboutRef!.current!.getBoundingClientRect().height +
-      introRef!.current!.getBoundingClientRect().height;
+    // arrVals[0] = 0;
+    // arrVals[1] = introRef!.current!.getBoundingClientRect().height;
+    // arrVals[2] =
+    //   aboutRef!.current!.getBoundingClientRect().height +
+    //   introRef!.current!.getBoundingClientRect().height;
   });
   return (
     <div ref={bodyRef}>
-      <ToastContainer />
+      {/* <ToastContainer />
       <div ref={loadingRef} className={styles.overlay}>
         <div className={styles.symbolContainer}>
           <img
@@ -164,7 +164,7 @@ export const LandingPage = (props: {}) => {
             </ul>
           </div>
         </nav>
-      </div>
+      </div> */}
       <div
         ref={introRef}
         className={"container-fluid " + styles.introContainer}
@@ -274,7 +274,8 @@ export const LandingPage = (props: {}) => {
           </div>
         </div>
       </div>
-      <div
+
+      {/* <div
         ref={aboutRef}
         className={"container-fluid " + styles.aboutOuterContainer}
       >
@@ -359,7 +360,7 @@ export const LandingPage = (props: {}) => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

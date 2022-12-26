@@ -1,11 +1,16 @@
 import React from "react";
-import styles from "../../styles/NavBar.module.css";
+import gsap from "gsap";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "react-toastify/dist/ReactToastify.css";
+import "@splidejs/react-splide/css";
+import styles from "../../styles/LandingPage.module.css";
 export const NavBar = () => {
   return (
     <div className={"container-fluid " + styles.navContainer}>
       <nav
         className={
-          "nav navbar navbar-expand-sm fixed-top navbar-dark " + styles.navbar
+          "container-fluid nav navbar navbar-expand-sm fixed-top navbar-dark " +
+          styles.navbar
         }
       >
         <span className={"navbar-brand  " + styles.navbarBrand}>
@@ -20,16 +25,22 @@ export const NavBar = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         ></button>
-        <div className="collapse navbar-collapse" id="navBarNav">
+        <div className={"collapse navbar-collapse "} id="navBarNav">
           <ul className="navbar-nav mr-auto">
             <li className={"nav-item " + styles.navItem}>
-              <a className={"nav-link " + styles.navLink}>Home</a>
+              <a href="/" className={"nav-link " + styles.navLink}>
+                Home
+              </a>
             </li>
             <li className={"nav-item " + styles.navItem}>
-              <a className={"nav-link " + styles.navLink}>About</a>
+              <a href="/about" className={"nav-link " + styles.navLink}>
+                About
+              </a>
             </li>
             <li className={"nav-item " + styles.navItem}>
-              <a className={"nav-link " + styles.navLink}>Contact</a>
+              <a href="/contact" className={"nav-link " + styles.navLink}>
+                Contact
+              </a>
             </li>
           </ul>
         </div>

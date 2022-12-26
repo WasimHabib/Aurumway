@@ -8,6 +8,8 @@ import { colors } from "../lib/models/contants";
 import { DetailsBox } from "../lib/components/DetailsBox";
 import { LandingPage } from "../lib/components/LandingPage";
 import Script from "next/script";
+import { AboutPage } from "../lib/components/AboutPage";
+import { NavBar } from "../lib/components/NavBar";
 
 function Home() {
   let text =
@@ -179,6 +181,7 @@ function Home() {
           </div>
         </div>
       </div> */}
+      <NavBar />
       <LandingPage />
     </>
   );

@@ -6,12 +6,12 @@
 .aboutOuterContainer {
   background-color: var(--alt-primary-color);
   width: 100%;
-  /* margin-top: 5rem; */
+  margin-top: 5rem;
   min-height: 100vh;
 }
 .contactOuterContainer {
   min-height: 100vh;
-  /* margin-top: 5rem; */
+  margin-top: 5rem;
   width: 100%;
   background-color: var(--alt-primary-color);
   display: flex;
@@ -351,6 +351,7 @@
   }
   .contactOuterContainer {
     min-height: 0vh;
+    margin-top: 10rem;
   }
   .tileText {
     font-size: 2rem;

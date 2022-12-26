@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../styles/AboutPage.module.css";
+import styles from "../../styles/LandingPage.module.css";
 export const AboutPage = () => {
   let key = 0;
   return (
