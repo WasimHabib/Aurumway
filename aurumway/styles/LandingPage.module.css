@@ -299,7 +299,7 @@
 @media all and (min-width: 48rem) and (orientation: portrait) {
   .contactContainer {
     min-height: 50vh;
-    min-width: 100%;
+    max-width: 100rem;
   }
   .aboutOuterContainer {
     min-height: 50vh;
@@ -325,8 +325,17 @@
     padding-right: 0.5rem;
   }
 }
+
+@media all and (min-width: 81.25rem) {
+  .contactContainer {
+    max-width: 60rem;
+  }
+}
 /*Desktop*/
 @media all and (min-width: 139rem) {
+  .contactContainer {
+    max-width: 100rem;
+  }
   .formInput {
     font-size: 2.5rem;
   }
