@@ -40,6 +40,7 @@ export const LandingPage = (props: {}) => {
     });
   }
   function submitForm() {
+    loadingRef.current!.style.display = "flex";
     sendEmail(
       nameRef!.current!.value,
       "",
@@ -69,6 +70,9 @@ export const LandingPage = (props: {}) => {
             hideProgressBar: true,
           }
         );
+      })
+      .finally(() => {
+        loadingRef.current!.style.display = "none";
       });
   }
   useLayoutEffect(() => {
