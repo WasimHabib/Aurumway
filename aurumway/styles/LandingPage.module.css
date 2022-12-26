@@ -2,6 +2,7 @@
   background-color: var(--alt-primary-color);
   height: 100%;
 }
+
 .aboutOuterContainer {
   background-color: var(--alt-primary-color);
   width: 100%;
@@ -116,6 +117,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .tileDesc {
   display: none;
   font-size: 1rem;
@@ -124,6 +126,7 @@
 }
 .navbar {
   background-color: var(--alt-primary-color);
+  max-width: 100rem;
 }
 .navLink {
   color: var(--alt-quarternary-color);
@@ -329,10 +332,11 @@
 @media all and (min-width: 81.25rem) {
   .contactContainer {
     max-width: 60rem;
+    width: 100%;
   }
 }
 /*Desktop*/
-@media all and (min-width: 139rem) {
+@media all and (min-width: 109rem) {
   .contactContainer {
     max-width: 100rem;
   }

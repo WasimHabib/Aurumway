@@ -1,10 +1,12 @@
 import React, { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { sendEmail } from "../services/commonFuncs";
-import styles from "../../styles/LandingPage.module.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
+import "@splidejs/react-splide/css";
+import styles from "../../styles/LandingPage.module.css";
 
 export const LandingPage = (props: {}) => {
   let headerText = "ERP Solutions";
@@ -117,7 +119,8 @@ export const LandingPage = (props: {}) => {
       <div ref={navRef} className={"container-fluid " + styles.navContainer}>
         <nav
           className={
-            "nav navbar navbar-expand-sm fixed-top navbar-dark " + styles.navbar
+            "container-fluid nav navbar navbar-expand-sm fixed-top navbar-dark " +
+            styles.navbar
           }
         >
           <span className={"navbar-brand  " + styles.navbarBrand}>
@@ -132,7 +135,7 @@ export const LandingPage = (props: {}) => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           ></button>
-          <div className="collapse navbar-collapse" id="navBarNav">
+          <div className={"collapse navbar-collapse "} id="navBarNav">
             <ul className="navbar-nav mr-auto">
               <li className={"nav-item " + styles.navItem}>
                 <a
@@ -172,12 +175,36 @@ export const LandingPage = (props: {}) => {
           </div>
         </div>
         <div className={"row "}>
-          <div className={"col d-flex justify-content-center"}>
-            <img
-              className={styles.stockImg}
-              src="tech_stock_laptop.jpg"
-              alt="tech stock laptop"
-            />
+          <div className={"col "}>
+            <Splide
+              hasTrack={false}
+              className={" " + styles.splideRoot}
+              options={{
+                classes: {
+                  arrows: "splide__arrows ",
+                  arrow: "splide__arrow ",
+                  prev: "splide__arrow--prev ",
+                  next: "splide__arrow--next ",
+                },
+              }}
+            >
+              <SplideTrack className={" " + styles.splideTrack}>
+                <SplideSlide className={" " + styles.splideSlide}>
+                  <img
+                    className={styles.stockImg}
+                    src="tech_stock_laptop.jpg"
+                    alt="tech stock laptop"
+                  />
+                </SplideSlide>
+                <SplideSlide className={" " + styles.splideSlide}>
+                  <img
+                    className={styles.stockImg}
+                    src="pittsburgh_skyline_1.jpg"
+                    alt="tech stock laptop"
+                  />
+                </SplideSlide>
+              </SplideTrack>
+            </Splide>
           </div>
         </div>
         <div className={"row "}>
