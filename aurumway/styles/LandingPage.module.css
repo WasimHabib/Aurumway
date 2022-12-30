@@ -2,8 +2,45 @@
   background-color: var(--alt-primary-color);
   height: 100%;
 }
-.personalInfo {
+.slideContainer {
   display: none;
+}
+.textBlurbHeader {
+  display: flex;
+  font-size: 2rem;
+  letter-spacing: 0px;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 0px;
+  font-weight: 700;
+  color: var(--alt-quarternary-color);
+  padding-bottom: 1rem;
+}
+.personalInfo {
+  min-height: 50vh;
+  padding: 1rem;
+}
+.ceoPhoto {
+  width: 100%;
+}
+.textBlurbContainer {
+  color: var(--alt-quarternary-color);
+  background-color: var(--alt-tertiary-color);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-block: 2rem;
+  align-items: center;
+  width: 100%;
+  padding: 0.5rem;
+}
+.aboutDescription {
+  margin-bottom: 0px;
+  width: 100%;
+  letter-spacing: 0.5px;
+  text-align: center;
+  font-size: 1em;
+  font-weight: 600;
 }
 .aboutOuterContainer {
   background-color: var(--alt-primary-color);
@@ -11,7 +48,7 @@
   margin-top: 5rem;
 }
 .contactOuterContainer {
-  min-height: 0vh;
+  min-height: calc(100vh - 5rem);
   margin-top: 5rem;
   width: 100%;
   background-color: var(--alt-primary-color);
@@ -62,19 +99,18 @@
 }
 .aboutContainer {
   min-height: calc(100vh - 5rem);
+  padding-inline: 1rem;
 }
 .tileContainer {
   background-image: url("../public/blue_background_mobile.png");
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 20px;
-  margin-block: 1rem;
+  margin-block: 2rem;
   display: flex;
-  justify-content: flex-end;
   flex-direction: column;
   align-items: center;
-  min-height: 7rem;
-  max-height: 12rem;
+  min-height: 22rem;
 }
 .tileIcon {
   height: 5rem;
@@ -120,10 +156,14 @@
 }
 
 .tileDesc {
-  display: none;
+  display: flex;
+  justify-content: center;
   font-size: 1rem;
+  padding-inline: 1rem;
+  width: 100%;
   font-weight: 700;
   color: var(--alt-quarternary-color);
+  text-align: center;
 }
 .navbar {
   background-color: var(--alt-primary-color);
@@ -156,7 +196,6 @@
 }
 .introContainer {
   margin-top: 5rem;
-  min-height: 100vh;
   background-color: var(--alt-primary-color);
 }
 .mainInfoContainer {
@@ -230,6 +269,12 @@
 }
 
 @media all and (min-width: 48rem) {
+  .slideContainer {
+    display: initial;
+  }
+  .imageContainer {
+    display: none !important;
+  }
   .tileContainer {
     justify-content: flex-start;
     margin-inline: 2%;
@@ -350,7 +395,7 @@
     font-size: 2.5rem;
   }
   .contactOuterContainer {
-    min-height: 0vh;
+    min-height: calc(100vh - 10rem);
     margin-top: 10rem;
   }
   .tileText {

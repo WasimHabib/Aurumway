@@ -3,17 +3,29 @@ import styles from "../../styles/LandingPage.module.css";
 export const AboutPage = () => {
   let key = 0;
   let aboutHeader = "About AurumWay";
-  let ceoText = "";
+  let offerHeader = "What We Offer";
+  let ceoText =
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus fringilla sodales pulvinar. Pellentesque in finibus mi. Sed tristique, lorem a viverra egestas, nibh diam tincidunt leo, sodales hendrerit tellus ante at est. Aliquam sed orci tellus. Aliquam feugiat odio sed urna sollicitudin dapibus. Cras interdum sem porttitor, varius magna non, rhoncus purus. Suspendisse potenti. Nam eu metus sed mauris eleifend consequat sit amet ut augue. Donec sed laoreet velit, sed facilisis risus. Ut rutrum tincidunt tortor at bibendum. Sed non velit lobortis, gravida nibh eu, aliquam eros. Maecenas convallis vel magna quis vehicula. Sed tincidunt, est sit amet hendrerit commodo, massa urna fermentum metus, vel blandit neque urna et velit. ";
   return (
     <div className={"container-fluid " + styles.aboutOuterContainer}>
-      <div className={" " + styles.personalInfo}>
-        {" "}
-        {/*d-flex flex-column justify-content-center  */}
+      <div
+        className={
+          "d-flex flex-column align-items-center " + styles.personalInfo
+        }
+      >
         <h1 className={" " + styles.introHeader}>{aboutHeader}</h1>
-        <img className={" " + styles.ceoPhoto} src="" alt="" />
-        <div className={" " + styles.arwButton}>
-          <p className={" " + styles.AboutDescription}>{ceoText}</p>
+        <img
+          className={" " + styles.ceoPhoto}
+          src="pittsburgh_skyline_1.jpg"
+          alt="ceo_picture"
+        />
+        <div className={" " + styles.textBlurbContainer}>
+          <h2 className={" " + styles.textBlurbHeader}>{"How It Started"}</h2>
+          <p className={" " + styles.aboutDescription}>{ceoText}</p>
         </div>
+      </div>
+      <div className={"row " + styles.offerText}>
+        <h1 className={" " + styles.introHeader}>{offerHeader}</h1>
       </div>
       <div className={"row mx-0 " + styles.aboutContainer}>
         {getAboutPageTiles().map((val) => (

@@ -19,11 +19,8 @@ export const LandingPage = (props: {}) => {
   let mainInfoDesc =
     "Our SAP-certified experts deliver comprehensive ERP solutions and support for all of your business needs.";
   let learnMoreText = "Learn More";
-  function scrollPage(index: number, arrVals: any[]) {
-    window.scrollTo({
-      behavior: "smooth",
-      top: arrVals[index],
-    });
+  function goToAbout() {
+    window.location.href = window.location.href + "/about";
   }
   useLayoutEffect(() => {
     parRef!.current!.style.marginLeft =
@@ -53,7 +50,7 @@ export const LandingPage = (props: {}) => {
           </div>
         </div>
         <div className={"row "}>
-          <div className={"col "}>
+          <div className={"col " + styles.slideContainer}>
             <Splide
               hasTrack={false}
               className={" " + styles.splideRoot}
@@ -83,6 +80,17 @@ export const LandingPage = (props: {}) => {
                 </SplideSlide>
               </SplideTrack>
             </Splide>
+          </div>
+          <div
+            className={
+              "col d-flex justify-content-center " + styles.imageContainer
+            }
+          >
+            <img
+              className={styles.stockImg}
+              src="tech_stock_laptop.jpg"
+              alt="tech stock laptop"
+            />
           </div>
         </div>
         <div className={"row "}>
@@ -149,7 +157,7 @@ export const LandingPage = (props: {}) => {
             <div
               className={styles.arwButton}
               onClick={() => {
-                scrollPage(1, arrVals);
+                goToAbout();
               }}
             >
               {learnMoreText}
