@@ -63,13 +63,15 @@ export const ContactPage = () => {
   }
 
   useLayoutEffect(() => {
-    textAreaRef!.current!.style.height =
-      formContRef!.current!.clientHeight / 2 + "px";
-
-    window.addEventListener("resize", () => {
+    if (textAreaRef !== null && textAreaRef.current !== null) {
       textAreaRef!.current!.style.height =
         formContRef!.current!.clientHeight / 2 + "px";
-    });
+
+      window.addEventListener("load", () => {
+        textAreaRef!.current!.style.height =
+          formContRef!.current!.clientHeight / 2 + "px";
+      });
+    }
   });
 
   return (

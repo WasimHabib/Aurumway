@@ -2,6 +2,71 @@
   background-color: var(--alt-primary-color);
   height: 100%;
 }
+.navItem {
+  cursor: pointer;
+}
+.getInTouchContainer {
+  color: var(--alt-quarternary-color);
+  font-size: 1.2em;
+  background-color: var(--alt-tertiary-color);
+  font-weight: 700;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 3.5rem;
+  max-width: 13rem;
+  margin: auto;
+  margin-block: 1rem;
+  cursor: pointer;
+}
+.landoContainer {
+  border-radius: 20px;
+  border: 5px solid var(--alt-tertiary-color);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: var(--alt-quarternary-color);
+  margin-block: 5rem;
+  padding-bottom: 1.5rem;
+}
+.landoHeader {
+  display: flex;
+  font-size: 2rem;
+  letter-spacing: 0px;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 0px;
+  font-weight: 700;
+  color: var(--alt-quarternary-color);
+  padding-block: 1rem;
+}
+.landoText {
+}
+.landoImage {
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.aboutGreetingContainer {
+  background-image: url("../public/reg_pitt_image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: calc(100vh - 6rem);
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 5rem;
+}
+.aboutGreetingHeader {
+  text-align: center;
+  font-weight: 700;
+  width: 100%;
+  font-size: 1.8rem;
+  color: var(--alt-quarternary-color);
+  margin-top: 1.5rem;
+}
 .slideContainer {
   display: none;
 }
@@ -18,21 +83,23 @@
 }
 .personalInfo {
   min-height: 50vh;
-  padding: 1rem;
+  margin-block: 3rem;
 }
 .ceoPhoto {
   width: 100%;
+  max-height: 25rem;
 }
 .textBlurbContainer {
   color: var(--alt-quarternary-color);
-  background-color: var(--alt-tertiary-color);
-  border-radius: 10px;
+  background-color: var(--alt-primary-color);
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   margin-block: 2rem;
   align-items: center;
   width: 100%;
-  padding: 0.5rem;
+  padding-block: 1rem;
+  border: 5px solid var(--alt-tertiary-color);
 }
 .aboutDescription {
   margin-bottom: 0px;
@@ -41,11 +108,13 @@
   text-align: center;
   font-size: 1em;
   font-weight: 600;
+  padding-inline: 0.5rem;
 }
 .aboutOuterContainer {
   background-color: var(--alt-primary-color);
   width: 100%;
   margin-top: 5rem;
+  padding: 0.5rem;
 }
 .contactOuterContainer {
   min-height: calc(100vh - 5rem);
@@ -197,6 +266,7 @@
 .introContainer {
   margin-top: 5rem;
   background-color: var(--alt-primary-color);
+  min-height: calc(100vh - 5rem);
 }
 .mainInfoContainer {
   background-image: url("../public/blue_background_mobile.png");
@@ -334,7 +404,7 @@
   }
   .aboutOuterContainer {
     max-width: 100rem;
-    margin-top: 8rem;
+    margin-top: 5rem;
   }
   .contactOuterContainer {
     max-width: 100rem;

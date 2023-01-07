@@ -2,6 +2,7 @@ import React from "react";
 import { AboutPage } from "../lib/components/AboutPage";
 import { NavBar } from "../lib/components/NavBar";
 import Script from "next/script";
+import { Footer } from "../lib/components/Footer";
 export default function About() {
   return (
     <>
@@ -12,6 +13,7 @@ export default function About() {
       />
       <NavBar />
       <AboutPage />
+      <Footer />
     </>
   );
 }

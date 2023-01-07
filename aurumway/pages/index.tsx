@@ -10,6 +10,7 @@ import { LandingPage } from "../lib/components/LandingPage";
 import Script from "next/script";
 import { AboutPage } from "../lib/components/AboutPage";
 import { NavBar } from "../lib/components/NavBar";
+import { Footer } from "../lib/components/Footer";
 
 function Home() {
   let text =
@@ -183,6 +184,7 @@ function Home() {
       </div> */}
       <NavBar />
       <LandingPage />
+      <Footer />
     </>
   );
 }

@@ -2,6 +2,7 @@ import React from "react";
 import { ContactPage } from "../lib/components/ContactPage";
 import { NavBar } from "../lib/components/NavBar";
 import Script from "next/script";
+import { Footer } from "../lib/components/Footer";
 export default function Contact() {
   return (
     <>
@@ -12,6 +13,7 @@ export default function Contact() {
       />
       <NavBar />
       <ContactPage />
+      <Footer />
     </>
   );
 }
