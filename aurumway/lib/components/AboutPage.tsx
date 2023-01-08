@@ -5,7 +5,7 @@ export const AboutPage = () => {
   let key = 0;
   let aboutHeader = "About AurumWay";
   let aboutGreeting = "A Pittsburgh Company";
-  let ceoHeader = "Meet the CEO";
+  let ceoHeader = "Meet Our Founder";
   let ceoText2 =
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consectetur ligula eu varius commodo. Suspendisse mattis egestas quam, id posuere mi mattis non. Vestibulum imperdiet leo at scelerisque imperdiet. Suspendisse molestie ultricies nisi, nec hendrerit tortor efficitur et. Nam fringilla orci ipsum. Suspendisse pellentesque porttitor feugiat. Nunc a lacus sit amet orci ornare rhoncus. Aliquam rutrum dictum consequat.";
   let insHeader = "Our Inspiration";

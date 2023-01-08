@@ -43,12 +43,6 @@ export const LandingPage = (props: {}) => {
       }
     };
     window.addEventListener("resize", onResize);
-
-    // parRef!.current!.style.marginLeft =
-
-    // parRef!.current!.style.marginRight =
-    //   (imgContRef!.current!.clientWidth - imgRef!.current!.clientWidth) / 2 +
-    //   "px";
   });
   return (
     <div ref={bodyRef}>
@@ -160,7 +154,7 @@ export const LandingPage = (props: {}) => {
                 </p>
               </div>
             </div>
-            <div className={" " + styles.mainInfoContainerDesktop}>
+            {/* <div className={" " + styles.mainInfoContainerDesktop}>
               {getInfoImgObjects().map((val, index) => {
                 return (
                   <div
@@ -175,7 +169,7 @@ export const LandingPage = (props: {}) => {
                   </div>
                 );
               })}
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

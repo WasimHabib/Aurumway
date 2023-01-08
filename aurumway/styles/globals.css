@@ -39,6 +39,10 @@ body {
   overflow: auto;
 }
 
+.clickableItem {
+  cursor: pointer;
+}
+
 @media only screen and (max-width: 800px) {
   .phoneHider {
     display: none;

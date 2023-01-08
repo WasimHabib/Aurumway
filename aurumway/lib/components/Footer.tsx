@@ -1,30 +1,7 @@
 import Link from "next/link";
 import React from "react";
-import styles from "../../styles/LandingPage.module.css";
-
+import styles from "../../styles/Footer.module.css";
 export const Footer = () => {
-  return (
-    <div className={" " + styles.footerContainer}>
-      <ul>
-        {getListTags().map((val, i) => {
-          if (val.listUrl === null) {
-            return <li>{val.listText}</li>;
-          } else {
-            return (
-              <Link href={val.listUrl}>
-                <li>
-                  <a>{val.listText}</a>
-                </li>
-              </Link>
-            );
-          }
-        })}
-      </ul>
-    </div>
-  );
-};
-
-function getListTags(): any[] {
   let result = [];
   result[0] = {
     listText: "Contact Us",
@@ -36,8 +13,27 @@ function getListTags(): any[] {
   };
   result[2] = {
     listText: "412-889-0763",
-    listUrl: null,
+    listUrl: "tel:4128890763",
+  };
+  result[3] = {
+    listText: "wasim.habib@outlook.com",
+    listUrl: "mailto:wasim.habib@outlook.com",
   };
 
-  return result;
-}
+  return (
+    <div className={" " + styles.footerContainer}>
+      <ul>
+        <Link href={result[0].listUrl}>
+          <li className={"clickableItem"}>{result[0].listText}</li>
+        </Link>
+        <li>{result[1].listText}</li>
+        <Link href={result[3].listUrl}>
+          <li className={"clickableItem"}>{result[3].listText}</li>
+        </Link>
+        <Link href={result[2].listUrl}>
+          <li className={"clickableItem"}>{result[2].listText}</li>
+        </Link>
+      </ul>
+    </div>
+  );
+};
