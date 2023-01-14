@@ -157,19 +157,18 @@ export const LandingPage = (props: {}) => {
               </div>
             </div>
             <div className={" " + styles.landoContainer}>
-              <img
-                src="landingImage.jpeg"
-                alt="landing_description_box"
-                className={" " + styles.landoImage}
-              />
+              <div className={" " + styles.landoImgContainer}>
+                <img
+                  src="landingImage.jpeg"
+                  alt="landing_description_box"
+                  className={" " + styles.landoImage}
+                />
+              </div>
+
               <div className={" " + styles.landoTextContainer}>
                 <h2 className={" " + styles.landoHeader}>{landingHeader}</h2>
-                <p className={"py-2 " + styles.aboutDescription}>
-                  {landingText1}
-                </p>
-                <p className={"py-2 " + styles.aboutDescription}>
-                  {landingText2}
-                </p>
+                <p className={"py-2 " + styles.landoText}>{landingText1}</p>
+                <p className={"py-2 " + styles.landoText}>{landingText2}</p>
               </div>
             </div>
             {/* <div className={" " + styles.mainInfoContainerDesktop}>

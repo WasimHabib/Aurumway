@@ -30,6 +30,10 @@
   margin-block: 5rem;
   padding-bottom: 1.5rem;
 }
+.landoImgContainer {
+  max-height: 20rem;
+  overflow: hidden;
+}
 .landoHeader {
   display: flex;
   font-size: 2rem;
@@ -42,6 +46,13 @@
   padding-block: 1rem;
 }
 .landoText {
+  margin-bottom: 0px;
+  width: 100%;
+  letter-spacing: 0.5px;
+  text-align: center;
+  font-size: 1em;
+  font-weight: 600;
+  padding-inline: 0.5rem;
 }
 .landoImage {
   width: 100%;
@@ -117,6 +128,7 @@
   font-weight: 600;
   padding-inline: 0.5rem;
 }
+
 .aboutOuterContainer {
   background-color: var(--alt-primary-color);
   width: 100%;
@@ -388,6 +400,36 @@
     display: initial;
     padding: 0rem;
   }
+  .landoContainer {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 0rem;
+  }
+  .landoImage {
+    width: 100%;
+    max-width: 45rem;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 0px;
+  }
+  .landoImgContainer {
+    width: 50%;
+    max-height: 30rem;
+  }
+  .landoTextContainer {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .landoHeader {
+    font-size: 2rem;
+  }
+  .landoText {
+    font-size: 0.7rem;
+    padding-inline: 2rem;
+  }
   .imageContainer {
     display: none !important;
   }
@@ -481,6 +523,24 @@
 
 /*Tablet*/
 @media all and (min-width: 50.8125rem) {
+  .landoText {
+    font-size: 0.8rem;
+  }
+  .landoHeader {
+    font-size: 2.2rem;
+  }
+}
+
+@media all and (min-width: 67.4375rem) {
+  .landoText {
+    font-size: 1.1rem;
+  }
+  .landoHeader {
+    font-size: 2.5rem;
+  }
+  .landoTextContainer {
+    margin-bottom: 5%;
+  }
 }
 
 @media all and (min-width: 36rem) {
@@ -494,6 +554,15 @@
   .contactContainer {
     max-width: 60rem;
     width: 100%;
+  }
+  .landoText {
+    font-size: 1.2rem;
+  }
+  .landoHeader {
+    font-size: 2.7rem;
+  }
+  .landoTextContainer {
+    margin-bottom: 8rem;
   }
 }
 /*Desktop*/
