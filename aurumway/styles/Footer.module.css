@@ -10,6 +10,7 @@
 .footerContainer > ul {
   text-decoration: none;
   list-style-type: none;
+  padding: 0rem;
 }
 
 .footerContainer > ul > li {

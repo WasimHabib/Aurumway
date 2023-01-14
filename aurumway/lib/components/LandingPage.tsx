@@ -16,6 +16,8 @@ export const LandingPage = (props: {}) => {
   let parRef = useRef<HTMLParagraphElement>(null);
   let bodyRef = useRef<HTMLDivElement>(null);
   let introRef = useRef<HTMLDivElement>(null);
+  let slideHeader1 = "This is a Slide Header";
+  let slideText1 = "This is a slide text";
   const [marginSide, setMarginSide] = useState("20px");
   let arrVals: any[] = [];
   let offerHeader = "What We Offer";
@@ -55,12 +57,14 @@ export const LandingPage = (props: {}) => {
             <h1 className={styles.introHeader}>{headerText}</h1>
           </div>
         </div>
-        <div className={"row "}>
+        <div className={"row " + styles.slideRow}>
           <div className={"col " + styles.slideContainer}>
             <Splide
               hasTrack={false}
               className={" " + styles.splideRoot}
               options={{
+                heightRatio: 0.5,
+                gap: "1rem",
                 classes: {
                   arrows: "splide__arrows ",
                   arrow: "splide__arrow ",
@@ -71,18 +75,32 @@ export const LandingPage = (props: {}) => {
             >
               <SplideTrack className={" " + styles.splideTrack}>
                 <SplideSlide className={" " + styles.splideSlide}>
-                  <img
-                    className={styles.stockImg}
-                    src="tech_stock_laptop.jpg"
-                    alt="tech stock laptop"
-                  />
+                  <div className={styles.splideContainer}>
+                    <img
+                      src="tech_stock_laptop.jpg"
+                      alt="tech stock laptop"
+                      className={styles.stockImgSlide}
+                    />
+                    <div className={styles.slideTextContainer}>
+                      <h1 className={styles.slideHeader}>{slideHeader1}</h1>
+                      <h3 className={styles.slideText}>{slideText1}</h3>
+                    </div>
+                  </div>
+                  {/*  */}
                 </SplideSlide>
                 <SplideSlide className={" " + styles.splideSlide}>
-                  <img
-                    className={styles.stockImg}
-                    src="pittsburgh_skyline_1.jpg"
-                    alt="tech stock laptop"
-                  />
+                  <div className={styles.splideContainer}>
+                    <img
+                      className={styles.stockImgSlide}
+                      src="pittsburgh_skyline_1.jpg"
+                      alt="tech stock laptop"
+                    />
+                    <div className={styles.slideTextContainer}>
+                      <h1 className={styles.slideHeader}>{slideHeader1}</h1>
+                      <h3 className={styles.slideText}>{slideText1}</h3>
+                    </div>
+                  </div>
+                  {/* */}
                 </SplideSlide>
               </SplideTrack>
             </Splide>

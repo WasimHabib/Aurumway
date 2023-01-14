@@ -12,8 +12,8 @@ export const Footer = () => {
     listUrl: null,
   };
   result[2] = {
-    listText: "412-889-0763",
-    listUrl: "tel:4128890763",
+    listText: "412-636-8749",
+    listUrl: "tel:4126368749",
   };
   result[3] = {
     listText: "wasim.habib@outlook.com",
@@ -21,7 +21,7 @@ export const Footer = () => {
   };
 
   return (
-    <div className={" " + styles.footerContainer}>
+    <div className={"container-fluid " + styles.footerContainer}>
       <ul>
         <Link href={result[0].listUrl}>
           <li className={"clickableItem"}>{result[0].listText}</li>
