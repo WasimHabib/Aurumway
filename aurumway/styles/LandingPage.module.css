@@ -560,6 +560,8 @@
   .ceoPhoto {
     width: 100%;
     max-height: 25rem;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
   }
   .ceoPhotoReverse {
     border-top-left-radius: 0px;
