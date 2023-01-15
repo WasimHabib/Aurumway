@@ -21,17 +21,16 @@ export const AboutPage = () => {
         <h1 className={" " + styles.aboutGreetingHeader}>{aboutGreeting}</h1>
       </div>
 
-      <div
-        className={
-          "d-flex flex-column align-items-center " + styles.personalInfo
-        }
-      >
+      <div className={" " + styles.personalInfo}>
         {/* <h1 className={" " + styles.introHeader}>{aboutHeader}</h1> */}
-        <img
-          className={" " + styles.ceoPhoto}
-          src="pittsburgh_skyline_1.jpg"
-          alt="pittsburgh_skyline"
-        />
+        <div className={" " + styles.personalImgContainer}>
+          <img
+            className={" " + styles.ceoPhoto}
+            src="pittsburgh_skyline_1.jpg"
+            alt="pittsburgh_skyline"
+          />
+        </div>
+
         <div className={" " + styles.textBlurbContainer}>
           <h2 className={" " + styles.textBlurbHeader}>{"How It Started"}</h2>
           <p className={" " + styles.aboutDescription}>{ceoText}</p>
@@ -39,33 +38,33 @@ export const AboutPage = () => {
       </div>
 
       <div
-        className={
-          "d-flex flex-column align-items-center " + styles.personalInfo
-        }
+        className={" " + styles.personalInfo + " " + styles.personalInfoReverse}
       >
         {/* <h1 className={" " + styles.introHeader}>{aboutHeader}</h1> */}
-        <img
-          className={" " + styles.ceoPhoto}
-          src="pittsburgh_skyline_1.jpg"
-          alt="ceo_picture"
-        />
+        <div className={" " + styles.personalImgContainer}>
+          <img
+            className={" " + styles.ceoPhoto + " " + styles.ceoPhotoReverse}
+            src="pittsburgh_skyline_1.jpg"
+            alt="ceo_picture"
+          />
+        </div>
+
         <div className={" " + styles.textBlurbContainer}>
           <h2 className={" " + styles.textBlurbHeader}>{ceoHeader}</h2>
           <p className={" " + styles.aboutDescription}>{ceoText2}</p>
         </div>
       </div>
 
-      <div
-        className={
-          "d-flex flex-column align-items-center " + styles.personalInfo
-        }
-      >
+      <div className={" " + styles.personalInfo}>
         {/* <h1 className={" " + styles.introHeader}>{aboutHeader}</h1> */}
-        <img
-          className={" " + styles.ceoPhoto}
-          src="green_tea_leaves_field.jpeg"
-          alt="ceo_picture"
-        />
+        <div className={" " + styles.personalImgContainer}>
+          <img
+            className={" " + styles.ceoPhoto}
+            src="green_tea_leaves_field.jpeg"
+            alt="ceo_picture"
+          />
+        </div>
+
         <div className={" " + styles.textBlurbContainer}>
           <h2 className={" " + styles.textBlurbHeader}>{insHeader}</h2>
           <p className={" " + styles.aboutDescription}>{insText}</p>

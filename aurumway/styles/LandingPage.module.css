@@ -101,7 +101,16 @@
 }
 .personalInfo {
   min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-block: 3rem;
+}
+.personalInfoReverse {
+  flex-direction: column;
+}
+.personalImgContainer {
+  width: 100%;
 }
 .ceoPhoto {
   width: 100%;
@@ -406,8 +415,7 @@
     padding-bottom: 0rem;
   }
   .landoImage {
-    width: 100%;
-    max-width: 45rem;
+    width: 90%;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
     border-top-right-radius: 0px;
@@ -533,13 +541,45 @@
 
 @media all and (min-width: 67.4375rem) {
   .landoText {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
   }
   .landoHeader {
-    font-size: 2.5rem;
+    font-size: 2.1rem;
   }
   .landoTextContainer {
     margin-bottom: 5%;
+  }
+  .personalInfo {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 0rem;
+    border: 5px solid var(--alt-tertiary-color);
+    border-radius: 20px;
+    min-height: 0vh;
+  }
+  .ceoPhoto {
+    width: 100%;
+    max-height: 25rem;
+  }
+  .ceoPhotoReverse {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+  .textBlurbContainer {
+    border: 0px;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .personalImgContainer {
+    width: 50%;
+  }
+  .personalInfoReverse {
+    flex-direction: row-reverse;
   }
 }
 
@@ -556,10 +596,10 @@
     width: 100%;
   }
   .landoText {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   .landoHeader {
-    font-size: 2.7rem;
+    font-size: 2.3rem;
   }
   .landoTextContainer {
     margin-bottom: 8rem;
