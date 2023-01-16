@@ -10,7 +10,9 @@
   },
   "dependencies": {
     "@emailjs/browser": "^3.9.1",
+    "@splidejs/react-splide": "^0.7.12",
     "bootstrap": "^5.2.2",
+    "bootstrap-icons": "^1.10.2",
     "gsap": "^3.11.3",
     "next": "12.3.1",
     "react": "18.2.0",

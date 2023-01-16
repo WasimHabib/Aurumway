@@ -6,6 +6,11 @@ import { Form } from "../lib/components/ContactForm";
 import { onSubmit } from "../lib/services/commonFuncs";
 import { colors } from "../lib/models/contants";
 import { DetailsBox } from "../lib/components/DetailsBox";
+import { LandingPage } from "../lib/components/LandingPage";
+import Script from "next/script";
+import { AboutPage } from "../lib/components/AboutPage";
+import { NavBar } from "../lib/components/NavBar";
+import { Footer } from "../lib/components/Footer";
 
 function Home() {
   let text =
@@ -51,7 +56,6 @@ function Home() {
         break;
     }
   }
-
   useLayoutEffect(() => {
     const introTimeline = gsap.timeline({
       delay: 0.5,
@@ -63,7 +67,12 @@ function Home() {
 
   return (
     <>
-      <h1 className="phoneMessage">
+      <Script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossOrigin="anonymous"
+      />
+      {/* <h1 className="phoneMessage">
         Please Open the Website on a Desktop, Laptop, or Tablet{" "}
       </h1>
       <div className="phoneHider">
@@ -172,7 +181,10 @@ function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
+      <NavBar />
+      <LandingPage />
+      <Footer />
     </>
   );
 }

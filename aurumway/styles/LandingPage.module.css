@@ -1,0 +1,657 @@
+.navContainer {
+  background-color: var(--alt-primary-color);
+  height: 100%;
+}
+.navItem {
+  cursor: pointer;
+}
+.getInTouchContainer {
+  color: var(--alt-quarternary-color);
+  font-size: 1.2em;
+  background-color: var(--alt-tertiary-color);
+  font-weight: 700;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 3.5rem;
+  max-width: 13rem;
+  margin: auto;
+  margin-block: 1rem;
+  cursor: pointer;
+}
+.landoContainer {
+  border-radius: 20px;
+  border: 5px solid var(--alt-tertiary-color);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: var(--alt-quarternary-color);
+  margin-block: 5rem;
+  padding-bottom: 1.5rem;
+}
+.landoImgContainer {
+  max-height: 20rem;
+  overflow: hidden;
+}
+.landoHeader {
+  display: flex;
+  font-size: 2rem;
+  letter-spacing: 0px;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 0px;
+  font-weight: 700;
+  color: var(--alt-quarternary-color);
+  padding-block: 1rem;
+}
+.landoText {
+  margin-bottom: 0px;
+  width: 100%;
+  letter-spacing: 0.5px;
+  text-align: center;
+  font-size: 1em;
+  font-weight: 600;
+  padding-inline: 0.5rem;
+}
+.landoImage {
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.aboutGreetingContainer {
+  background-image: url("../public/reg_pitt_image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: calc(100vh - 6rem);
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 5rem;
+}
+.aboutGreetingHeader {
+  text-align: center;
+  font-weight: 700;
+  width: 100%;
+  font-size: 1.8rem;
+  color: var(--alt-quarternary-color);
+  margin-top: 1.5rem;
+}
+.slideContainer {
+  display: none;
+}
+.slideRow * {
+  border-radius: 20px;
+}
+.slideRow {
+  width: 100%;
+  margin: auto;
+}
+.textBlurbHeader {
+  display: flex;
+  font-size: 2rem;
+  letter-spacing: 0px;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 0px;
+  font-weight: 700;
+  color: var(--alt-quarternary-color);
+  padding-bottom: 1rem;
+}
+.personalInfo {
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-block: 3rem;
+}
+.personalInfoReverse {
+  flex-direction: column;
+}
+.personalImgContainer {
+  width: 100%;
+}
+.ceoPhoto {
+  width: 100%;
+  max-height: 25rem;
+}
+.textBlurbContainer {
+  color: var(--alt-quarternary-color);
+  background-color: var(--alt-primary-color);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-block: 2rem;
+  align-items: center;
+  width: 100%;
+  padding-block: 1rem;
+  border: 5px solid var(--alt-tertiary-color);
+}
+.aboutDescription {
+  margin-bottom: 0px;
+  width: 100%;
+  letter-spacing: 0.5px;
+  text-align: center;
+  font-size: 1em;
+  font-weight: 600;
+  padding-inline: 0.5rem;
+}
+
+.aboutOuterContainer {
+  background-color: var(--alt-primary-color);
+  width: 100%;
+  margin-top: 5rem;
+  padding: 0.5rem;
+}
+.contactOuterContainer {
+  min-height: calc(100vh - 5rem);
+  margin-top: 5rem;
+  width: 100%;
+  background-color: var(--alt-primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.formContainer {
+  padding-inline: 1rem;
+  width: 100%;
+  min-height: 70vh;
+}
+.formInput {
+  width: 100%;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+.formGroup {
+  margin-block: 1rem;
+  padding-inline: 1rem;
+}
+.formLabel {
+  font-size: 1.5rem;
+  color: var(--alt-quarternary-color);
+  font-weight: 700;
+}
+.contactTitle {
+  font-size: 2rem;
+  color: var(--alt-quarternary-color);
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+.contactContainer {
+  min-height: 82vh;
+  background-image: url("../public/blue_background_mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mainInfoContainerDesktop {
+  display: none;
+}
+.aboutContainer {
+  min-height: calc(100vh - 5rem);
+  padding-inline: 1rem;
+}
+.tileContainer {
+  background-image: url("../public/blue_background_mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+  margin-block: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 22rem;
+}
+.tileIcon {
+  height: 5rem;
+}
+.tileText {
+  display: flex;
+  justify-content: center;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--alt-quarternary-color);
+}
+.spinner {
+  position: relative;
+  height: 200px;
+  margin: auto;
+}
+.overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+  z-index: 7; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+  justify-content: center;
+  align-items: center;
+}
+.symbolContainer {
+  background-color: black;
+  border: 5px solid var(--quarternary-color);
+  border-radius: 20px;
+  height: 300px;
+  width: 300px;
+  margin: auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tileDesc {
+  display: flex;
+  justify-content: center;
+  font-size: 1rem;
+  padding-inline: 1rem;
+  width: 100%;
+  font-weight: 700;
+  color: var(--alt-quarternary-color);
+  text-align: center;
+}
+.navbar {
+  background-color: var(--alt-primary-color);
+  max-width: 100rem;
+}
+.navLink {
+  color: var(--alt-quarternary-color);
+  font: var(--ui-font);
+  font-weight: bold;
+  font-size: 1.4em;
+}
+.hamburgerIcon {
+  background-color: var(--alt-secondary-color);
+
+  height: 1.3em;
+  float: right;
+  margin-right: 0.3em;
+  font-size: 2em;
+}
+.navbarBrand {
+  font: var(--ui-font);
+  font-weight: bold;
+
+  font-size: 1.6em;
+  margin: auto;
+}
+
+.splideContainer {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  border-radius: 20px;
+}
+.stockImg {
+  width: 100%;
+  border-radius: 20px;
+}
+.splideRoot {
+  border-radius: 20px;
+}
+.stockImgSlide {
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  position: absolute;
+  z-index: 1;
+}
+.slideTextContainer {
+  font: var(--ui-font);
+  color: var(--pentiary-color);
+  height: 100%;
+  padding-inline: 5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  padding-block: 2rem;
+  z-index: 2;
+}
+.slideHeader {
+  font-weight: 700;
+}
+.slideText {
+  font-weight: 500;
+}
+.introContainer {
+  margin-top: 5rem;
+  background-color: var(--alt-primary-color);
+  min-height: calc(100vh - 5rem);
+}
+.mainInfoContainer {
+  background-image: url("../public/blue_background_mobile.png");
+  background-size: cover;
+  border-radius: 20px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  height: 16.875rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.mainInfoImage {
+  width: 70%;
+  max-width: 10rem;
+}
+.mainInfomiddleImage {
+  width: 100%;
+  max-width: 10rem;
+}
+.arwButton {
+  color: var(--alt-quarternary-color);
+  font-size: 1.2em;
+  background-color: var(--alt-tertiary-color);
+  font-weight: 700;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 3.5rem;
+  max-width: 13rem;
+  margin: auto;
+  cursor: pointer;
+}
+.mainInfoDesc {
+  color: var(--alt-quarternary-color);
+  font-weight: 700;
+  font-size: 1.2em;
+  margin: 0px;
+  padding: 0px;
+  margin-right: 1%;
+  padding-block: 1rem;
+}
+.submitButtonRow {
+  padding-inline: 1rem;
+  margin-block: 1rem;
+}
+.submitButtonColumn {
+  display: flex;
+  justify-content: center;
+}
+.mainImgContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.introHeader {
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  color: var(--alt-quarternary-color);
+}
+@media all and (min-width: 21.5rem) {
+  .navbarBrand {
+    font-size: 1.8em;
+  }
+  .hamburgerIcon {
+    height: 1.7em;
+  }
+}
+
+@media all and (min-width: 48rem) {
+  .slideContainer {
+    display: initial;
+    padding: 0rem;
+  }
+  .landoContainer {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 0rem;
+  }
+  .landoImage {
+    width: 90%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 0px;
+  }
+  .landoImgContainer {
+    width: 50%;
+    max-height: 30rem;
+  }
+  .landoTextContainer {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .landoHeader {
+    font-size: 2rem;
+  }
+  .landoText {
+    font-size: 0.7rem;
+    padding-inline: 2rem;
+  }
+  .imageContainer {
+    display: none !important;
+  }
+  .tileContainer {
+    justify-content: flex-start;
+    margin-inline: 2%;
+    min-height: 30rem;
+    max-width: 30rem;
+  }
+  .submitButtonColumn {
+    display: initial;
+  }
+  .aboutContainer {
+    align-items: center;
+    justify-content: space-between;
+  }
+  .mainInfoContainerDesktop {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  .mainImgContainerDesktop {
+    background-image: url("../public/blue_background_mobile.png");
+    background-size: cover;
+    height: 40vw;
+    max-height: 30rem;
+    width: 30vw;
+    max-width: 30rem;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+  }
+  .mainInfoImageDesktop {
+    height: 12vw;
+    max-height: 10rem;
+    margin-block: 1rem;
+  }
+  .mainInfoContainer {
+    display: none;
+  }
+  .tileText {
+    font-size: 1.2rem;
+  }
+
+  .tileDesc {
+    display: flex;
+    justify-content: center;
+  }
+  .contactContainer {
+    max-width: 100rem;
+    width: calc(100vw - 30%);
+    min-height: 0vh;
+  }
+  .formContainer {
+    min-height: 0vh;
+  }
+  .introContainer {
+    max-width: 100rem;
+  }
+  .aboutOuterContainer {
+    max-width: 100rem;
+    margin-top: 5rem;
+  }
+  .contactOuterContainer {
+    max-width: 100rem;
+  }
+  .arwButtonContainer {
+    display: none;
+  }
+}
+
+@media all and (min-width: 48rem) and (orientation: portrait) {
+  .contactContainer {
+    min-height: 50vh;
+    max-width: 100rem;
+  }
+  .aboutOuterContainer {
+    min-height: 50vh;
+  }
+  .introContainer {
+    min-height: 100vh;
+  }
+  .aboutContainer {
+    min-height: calc(50vh - 5rem);
+  }
+  .arwButtonContainer {
+    display: none;
+  }
+}
+
+/*Tablet*/
+@media all and (min-width: 50.8125rem) {
+  .landoText {
+    font-size: 0.8rem;
+  }
+  .landoHeader {
+    font-size: 2.2rem;
+  }
+}
+
+@media all and (min-width: 67.4375rem) {
+  .landoText {
+    font-size: 0.9rem;
+  }
+  .landoHeader {
+    font-size: 2.1rem;
+  }
+  .landoTextContainer {
+    margin-bottom: 5%;
+  }
+  .personalInfo {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 0rem;
+    border: 5px solid var(--alt-tertiary-color);
+    border-radius: 20px;
+    min-height: 0vh;
+  }
+  .ceoPhoto {
+    width: 100%;
+    max-height: 25rem;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+  }
+  .ceoPhotoReverse {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+  .textBlurbContainer {
+    border: 0px;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .personalImgContainer {
+    width: 50%;
+  }
+  .personalInfoReverse {
+    flex-direction: row-reverse;
+  }
+}
+
+@media all and (min-width: 36rem) {
+  .navItem {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+@media all and (min-width: 81.25rem) {
+  .contactContainer {
+    max-width: 60rem;
+    width: 100%;
+  }
+  .landoText {
+    font-size: 1rem;
+  }
+  .landoHeader {
+    font-size: 2.3rem;
+  }
+  .landoTextContainer {
+    margin-bottom: 8rem;
+  }
+}
+/*Desktop*/
+@media all and (min-width: 109rem) {
+  .contactContainer {
+    max-width: 100rem;
+  }
+  .formInput {
+    font-size: 2.5rem;
+  }
+  .contactTitle {
+    font-size: 3rem;
+  }
+  .formLabel {
+    font-size: 2.5rem;
+  }
+  .contactOuterContainer {
+    min-height: calc(100vh - 10rem);
+    margin-top: 10rem;
+  }
+  .tileText {
+    font-size: 2rem;
+  }
+  .tileContainer {
+    min-height: 40rem;
+    margin-inline: 0rem;
+    overflow: hidden;
+  }
+  .tileDesc {
+    font-size: 1.4rem;
+  }
+  .tileIcon {
+    height: 8rem;
+  }
+  .navbarBrand {
+    font-size: 3rem;
+  }
+  .navLink {
+    font-size: 2rem;
+  }
+  .introContainer {
+    margin-top: 6rem;
+  }
+  .landoText {
+    font-size: 1.2rem;
+  }
+  .landoHeader {
+    font-size: 2.7rem;
+  }
+}

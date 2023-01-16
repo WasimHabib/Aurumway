@@ -1,0 +1,39 @@
+.footerContainer {
+  background-color: rgb(20, 20, 22);
+  min-height: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.footerContainer > ul {
+  text-decoration: none;
+  list-style-type: none;
+  padding: 0rem;
+}
+
+.footerContainer > ul > li {
+  padding-block: 0.7rem;
+  font: var(--ui-font);
+  font-size: 1.1rem;
+  text-align: center;
+  font-weight: 550;
+  padding-inline: 1rem;
+  color: white;
+}
+
+@media all and (min-width: 21.5rem) {
+}
+@media all and (min-width: 48rem) {
+}
+@media all and (min-width: 48rem) and (orientation: portrait) {
+}
+@media all and (min-width: 50.8125rem) {
+}
+@media all and (min-width: 36rem) {
+}
+@media all and (min-width: 81.25rem) {
+}
+@media all and (min-width: 109rem) {
+}
