@@ -15,8 +15,7 @@ export const NavBar = () => {
         }
       >
         <span className={"navbar-brand  " + styles.navbarBrand}>
-          <img src="cog_golden.png" alt="" height="50" className="mb-1" />
-          AurumWay LLC
+          <img src="image_logo_icon.png" alt="" height="50" className="mb-1" />
         </span>
         <button
           data-bs-toggle="collapse"
