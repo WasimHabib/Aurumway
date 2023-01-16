@@ -16,8 +16,8 @@ export const Footer = () => {
     listUrl: "tel:4126368749",
   };
   result[3] = {
-    listText: "wasim.habib@gmail.com",
-    listUrl: "mailto:wasim.habib@outlook.com",
+    listText: "hr@aurumway.us",
+    listUrl: "mailto:mailto:hr@aurumway.us",
   };
 
   return (
