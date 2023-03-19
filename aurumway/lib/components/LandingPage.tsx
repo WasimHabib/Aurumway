@@ -23,9 +23,9 @@ export const LandingPage = (props: {}) => {
   let offerHeader = "What We Offer";
   let landingHeader = "What We Do";
   let landingText1 =
-    "Proin a justo ex. Curabitur sit amet lobortis quam, vel luctus justo. Quisque vitae ultricies ipsum. Maecenas ac tellus sed nisi finibus fermentum.";
+    "Data Migrations from ECC to S/4HANA  – subscription SAAS renewal model Data Quality, Profiling, Cleansing and harmonization SAP and Non-SAP Best Practices for Data and Custom Code Migration and Remediation.";
   let landingText2 =
-    "Curabitur ut scelerisque lorem, in sagittis nulla. Donec blandit nulla odio, sit amet mattis massa hendrerit nec. Ut at nunc ornare, malesuada arcu non, porttitor orci.";
+    "Code conversion and custom code adaptation (Functional) based on Simplification Database BTP extensions in SAP S/4HANA Implementations Migration of ECC on-premise HCM/Payroll to Successfactors Employee Central Payroll (ECP)";
   let key = 0;
   let mainInfoDesc =
     "Our SAP-certified experts deliver comprehensive ERP solutions and support for all of your business needs.";
