@@ -13,23 +13,11 @@ import { NavBar } from "../lib/components/NavBar";
 import { Footer } from "../lib/components/Footer";
 
 function Home() {
-  let text =
-    " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
   let backDropRef = useRef<HTMLDivElement>(null);
   let entranceRef = useRef<HTMLDivElement>(null);
   let mainRef = useRef<HTMLDivElement>(null);
   let headerText = "Welcome to Aurumway";
-  let detailsText1 =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.";
-  let detailsText2 =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Libero volutpat sed cras ornare arcu dui vivamus arcu. In hac habitasse platea dictumst vestibulum rhoncus. Scelerisque eu ultrices vitae auctor eu augue. Sapien et ligula ullamcorper malesuada proin libero nunc consequat. Sapien eget mi proin sed libero. ";
-  let detailsText3 =
-    "Varius morbi enim nunc faucibus. Vel risus commodo viverra maecenas accumsan lacus vel facilisis. Tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin libero. Pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat. Enim lobortis scelerisque fermentum dui faucibus in ornare.";
-  let infoText =
-    "Urna porttitor rhoncus dolor purus. In massa tempor nec feugiat nisl pretium fusce id velit. Vitae nunc sed velit dignissim sodales ut eu sem. Platea dictumst vestibulum rhoncus est. Curabitur vitae nunc sed velit dignissim. Etiam sit amet nisl purus in. Scelerisque purus semper eget duis at.";
   let contactRef = useRef<HTMLDivElement>(null);
-  let ceoText =
-    "Urna porttitor rhoncus dolor purus. In massa tempor nec feugiat nisl pretium fusce id velit. Vitae nunc sed velit dignissim sodales ut eu sem. Platea dictumst vestibulum rhoncus est.";
   var clickFunc = ({ currentTarget }: any): void => {
     console.log("clicked button");
   };
