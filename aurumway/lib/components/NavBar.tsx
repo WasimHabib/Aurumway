@@ -15,7 +15,7 @@ export const NavBar = () => {
         }
       >
         <span className={"navbar-brand  " + styles.navbarBrand}>
-          <img src="image_logo_icon.png" alt="" height="50" className="mb-1" />
+          <img src="/image_logo_icon.png" alt="" height="50" className="mb-1" />
         </span>
         <button
           data-bs-toggle="collapse"

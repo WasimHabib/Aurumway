@@ -82,8 +82,8 @@ export const LandingPage = (props: {}) => {
                       className={styles.stockImgSlide}
                     />
                     <div className={styles.slideTextContainer}>
-                      <h1 className={styles.slideHeader}>{slideHeader1}</h1>
-                      <h3 className={styles.slideText}>{slideText1}</h3>
+                      <h1 className={styles.slideHeader}>{}</h1>
+                      <h3 className={styles.slideText}>{}</h3>
                     </div>
                   </div>
                   {/*  */}
@@ -96,8 +96,8 @@ export const LandingPage = (props: {}) => {
                       alt="tech stock laptop"
                     />
                     <div className={styles.slideTextContainer}>
-                      <h1 className={styles.slideHeader}>{slideHeader1}</h1>
-                      <h3 className={styles.slideText}>{slideText1}</h3>
+                      <h1 className={styles.slideHeader}>{}</h1>
+                      <h3 className={styles.slideText}>{}</h3>
                     </div>
                   </div>
                   {/* */}
